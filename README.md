@@ -9,6 +9,10 @@ Multi-host Raspberry Pi virtualization lab using VMware ESXi, vCenter, OpenWRT, 
 This academic project involved building a multi-host virtualization environment using Raspberry Pi hardware and VMware ESXi. The lab combined virtualized guest operating systems, centralized host management, network services, and shared storage.
 The environment was designed as a foundation for future malware-analysis work. Virtual machine provisioning, network connectivity restrictions, and snapshot-based recovery were tested. Live malware execution and behavioural analysis were not performed.
 
+## Architecture
+
+![Architecture diagram of the Raspberry Pi virtualization lab](diagrams/lab-architecture.png)
+
 ## Objectives
 
 - Build a low-cost, multi-host virtualization environment.
