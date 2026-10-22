@@ -11,7 +11,7 @@ The environment was designed as a foundation for future malware-analysis work. V
 
 ## Architecture
 
-![Architecture diagram of the Raspberry Pi virtualization lab](diagrams/lab-architecture.png)
+![Architecture diagram of the Raspberry Pi virtualization lab](diagrams/lab_architecture_schema.png)
 
 ## Objectives
 
