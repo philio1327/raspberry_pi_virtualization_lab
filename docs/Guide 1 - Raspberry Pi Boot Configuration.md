@@ -37,7 +37,7 @@ For the original project, USB boot preparation was relevant to the planned virtu
 2. Download Raspberry Pi Imager for your computer's operating system.
    <details>
      <summary>View screenshot</summary>
-     ![Select correct OS](.../doc_images/download_rasp_pi_imager.png)
+     ![Select correct OS](../doc_images/download_rasp_pi_imager.png)
    </details>
 3. Install and launch the application.
 
@@ -48,5 +48,5 @@ Use the official download source to reduce the risk of obtaining a modified inst
 1. Insert the microSD card into your computer, using an adapter if necessary 
    <details>
      <summary>View screenshot</summary>
-     ![Adapter example](.../doc_images/adapter_example.png)
+     ![Adapter example](../doc_images/adapter_example.png)
    </details>
