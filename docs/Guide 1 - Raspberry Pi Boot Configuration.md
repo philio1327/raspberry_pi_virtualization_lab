@@ -60,5 +60,35 @@ Use the official download source to reduce the risk of obtaining a modified inst
 ## 4. Select the Raspberry Pi model
 
 1. In Raspberry Pi Imager, open <strong>Choose Device</strong>
+<details>
+   <summary>View screenshot</summary>
+      
+   ![Adapter example](./doc_images/choose_device.png)
+</details>
+2. Select the model corresponding to the Raspberry Pi you intend to configure
 
-2. Select the model corresponding to the Raspberry Pi you intend to configure.
+![Select Model](./doc_images/select_raspberry_pi_model.png) 
+
+The original project used a Raspberry Pi 4 for this procedure. Select the model appropriate to your own hardware rather than assuming all models use identical bootloader options.
+
+## 5. Select the bootloader utility
+
+1. Open <strong>Choose OS</strong>
+2. Navigate to <strong>Misc utility images</strong>
+
+![Misc utility images](./doc_images/select_misc_utility_images.png)
+3. Locate the bootloader or boot-method utility appropriate to your intended configuration.
+4. Select the relevant option
+
+![Select Bootloader](./doc_images/select_bootloader.png)
+
+The original documentation used this menu to access the bootloader configuration utilties. Menu names and available options can change between Raspberry Pi Imager releases, so verify the current interface before following this step verbatim.
+
+## 6. Choose the boot method and storage device
+
+1. Select the desired boot method, such as USB or network boot, if supported by the chosen utility and Raspberry Pi model. Note that SD card boot is the default method.
+
+![Select Boot Type](./doc_images/select_boot_type.png)
+2. Open <strong>Choose Storage</strong>
+
+![Choose Storage](./doc_images/choose_storage.png)
