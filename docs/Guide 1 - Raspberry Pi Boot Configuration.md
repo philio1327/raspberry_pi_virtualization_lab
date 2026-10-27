@@ -52,3 +52,13 @@ Use the official download source to reduce the risk of obtaining a modified inst
       
      ![Adapter example](./doc_images/adapter_example.png)
    </details>
+2. Confirm that the card is detected.
+3. Identify the card's capacity and verify that it is the intended target.
+
+<strong>Do not proceed if you cannot confidently distinguish the microSD card from other connected storage devices!</strong>
+
+## 4. Select the Raspberry Pi model
+
+1. In Raspberry Pi Imager, open <strong>Choose Device</strong>
+
+2. Select the model corresponding to the Raspberry Pi you intend to configure.
