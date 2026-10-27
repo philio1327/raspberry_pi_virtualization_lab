@@ -89,6 +89,10 @@ The original documentation used this menu to access the bootloader configuration
 1. Select the desired boot method, such as USB or network boot, if supported by the chosen utility and Raspberry Pi model. Note that SD card boot is the default method.
 
 ![Select Boot Type](./doc_images/select_boot_type.png)
-2. Open <strong>Choose Storage</strong>
 
-![Choose Storage](./doc_images/choose_storage.png)
+2. Open <strong>Choose Storage</strong>
+3. Select the microSD card identified earlier.
+
+![Choose Storage](./doc_images/choose_storage.png) 
+
+4. Review the selected device before confirming the write operation.
