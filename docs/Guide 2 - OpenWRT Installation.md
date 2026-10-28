@@ -45,3 +45,19 @@ The original project used a Raspberry Pi 3 Model B to provide network services t
 5. Download the image to your computer.
 
 If you are unsure which Raspberry Pi model you have, check the device's model information before selecting firmware. Firmware images are hardware-specific, so do not assume that an image for one model will work on another.
+
+Also, choose an image supported by your device and appropriate for your intended use. Confirm the exact image type and filename in the Firmware Selector before downloading.
+
+## 2. Open Raspberry Pi Imager
+
+1. Insert microSD card into your computer. Use an adapter if needed.
+2. Launch Raspberry Pi Imager.
+3. Open <strong>Choose Device</strong>
+4. Select the Raspberry Pi model matching your hardware.
+   <details>
+     <summary>View screenshot</summary>
+      
+     ![Select Correct Raspberry Pi Model](./doc_images/openwrt_imager_choose_device.png)
+   </details>
+
+The original setup used a Raspberry Pi 3 Model B. Select the model you are actually configuring.
