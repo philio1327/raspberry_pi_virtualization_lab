@@ -107,8 +107,6 @@ The original documentation used this menu to access the bootloader configuration
 
 5. Continue through the confirmation prompts to write the image.
 
-Wait for the application to finish writing and verifying the data. Do not remove the card while the operation is in progress.
-
 ## 7. Boot the Raspberry Pi and verify the result 
 
 1. Safely remove the microSD card after the imaging process completes.
@@ -127,4 +125,4 @@ Wait for the application to finish writing and verifying the data. Do not remove
 
 Note: Because display behaviour may vary by model, utility image, and software version, confirm the expected indicator for the utility you selected before treating this as definitive verification. 
 
-6. Review the selected device before confirming the write operation.
+
