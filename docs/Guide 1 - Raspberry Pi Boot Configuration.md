@@ -125,4 +125,25 @@ The original documentation used this menu to access the bootloader configuration
 
 Note: Because display behaviour may vary by model, utility image, and software version, confirm the expected indicator for the utility you selected before treating this as definitive verification. 
 
+### Troubleshooting
+
+If the expected result does not appear:
+- Confirm that the correct Raspberry Pi model was selected.
+- Check that the image-writing and verification process completed successfully.
+- Recheck the selected boot method and microSD card.
+- Consult the current Raspberry Pi documentation for model-specific recovery or troubleshooting steps.
+
+### Security and operational considerations
+- Use the official Raspberry Pi software source (this should be obvious!)
+- Verify the target storage device before any destructive write.
+- Keep the bootloader configuration appropriate to the intended hardware and deployment.
+- Do not assume that changing the boot method alone provides network isolation or other security controls.
+- Record the Raspberry Pi model and relevant software versions when documenting a reproducible setup.
+
+### Scope and limitations
+
+This guide covers bootloader preparation only. It does not configure anything else. The original procedure was developed as part of an academic infrastructure project. Before using this guide on current hardware, verify that the menu options and success indicators match the Raspberry Pi model and the Raspberry Pi Imager version in use.
+
+### See other guide docs for related documentation
+
 
