@@ -40,7 +40,7 @@ The original project used a Raspberry Pi 3 Model B to provide network services t
    <details>
      <summary>View screenshot</summary>
       
-     ![Download OpenWRT](./doc_images/download_openwrt.png)
+     ![Download OpenWRT](./doc_images/download_openwrt_firmware.png)
    </details>
 5. Download the image to your computer.
 
