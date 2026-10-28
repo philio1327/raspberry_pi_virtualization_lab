@@ -28,11 +28,11 @@ The original project used a Raspberry Pi 3 Model B to provide network services t
 
 1. Open the <a href="https://firmware-selector.openwrt.org/">OpenWRT Firmware Selector.</a>
 2. Select the target device corresponding to your Raspberry Pi model.
-  <details>
-    <summary>View screenshot</summary>
-    
-    ![Select Raspberry Pi Model](./doc_images/openwrt_rasp_pi_model_select.png)
-  </details>
+   <details>
+     <summary>View screenshot</summary>
+      
+     ![Select Raspberry Pi Model](./doc_images/openwrt_rasp_pi_model_select.png)
+   </details>
 
 3. Locate the appropriate firmware image for that device.
 4. Download the image to your computer.
