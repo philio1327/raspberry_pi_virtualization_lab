@@ -35,6 +35,13 @@ The original project used a Raspberry Pi 3 Model B to provide network services t
    </details>
 
 3. Locate the appropriate firmware image for that device.
-4. Download the image to your computer.
+4. Choose the image type. <strong>SquashFS</strong> and <strong>ext4</strong> were the main filesystem image types. If additional package installation, services and/or filesystem flexibilty were priorities, ext4 would be preferred. The original setup primarily needed DHCP and DNS services so <strong>SquashFS</strong> was sufficient.
+
+   <details>
+     <summary>View screenshot</summary>
+      
+     ![Download OpenWRT](./doc_images/download_openwrt.png)
+   </details>
+5. Download the image to your computer.
 
 If you are unsure which Raspberry Pi model you have, check the device's model information before selecting firmware. Firmware images are hardware-specific, so do not assume that an image for one model will work on another.
