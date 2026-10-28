@@ -96,3 +96,54 @@ The original documentation used this menu to access the bootloader configuration
 ![Choose Storage](./doc_images/choose_storage.png) 
 
 4. Review the selected device before confirming the write operation.
+
+<details>
+   <summary>View screenshot</summary>
+
+   ![Confirm Write Operation](./doc_images/confirm_write_operation.png)
+</details>
+
+<strong>Important:</strong> The selected microSD card is the destination for the utility image. Selecting the wrong storage device can cause unintended data loss!
+
+5. Continue through the confirmation prompts to write the image.
+
+## 7. Boot the Raspberry Pi and verify the result 
+
+1. Safely remove the microSD card after the imaging process completes.
+2. Insert it into the Raspberry Pi
+3. Connect a monitor using a compatible display cable if local verification is required.
+
+<details>
+   <summary>View screenshot</summary>
+
+   ![HDMI To MicroUSB Cable](./doc_images/monitor_cable.jpg)
+</details>
+
+5. Power on the Raspberry Pi and observe the displayed output. It should be a fully green monitor like the picture below if you are using the same model.
+
+![Green display monitor](./doc_images/green_display_monitor.jpg)
+
+Note: Because display behaviour may vary by model, utility image, and software version, confirm the expected indicator for the utility you selected before treating this as definitive verification. 
+
+### Troubleshooting
+
+If the expected result does not appear:
+- Confirm that the correct Raspberry Pi model was selected.
+- Check that the image-writing and verification process completed successfully.
+- Recheck the selected boot method and microSD card.
+- Consult the current Raspberry Pi documentation for model-specific recovery or troubleshooting steps.
+
+### Security and operational considerations
+- Use the official Raspberry Pi software source (this should be obvious!)
+- Verify the target storage device before any destructive write.
+- Keep the bootloader configuration appropriate to the intended hardware and deployment.
+- Do not assume that changing the boot method alone provides network isolation or other security controls.
+- Record the Raspberry Pi model and relevant software versions when documenting a reproducible setup.
+
+### Scope and limitations
+
+This guide covers bootloader preparation only. It does not configure anything else. The original procedure was developed as part of an academic infrastructure project. Before using this guide on current hardware, verify that the menu options and success indicators match the Raspberry Pi model and the Raspberry Pi Imager version in use.
+
+### See other guide docs for related documentation
+
+
