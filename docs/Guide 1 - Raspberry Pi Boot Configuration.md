@@ -77,6 +77,7 @@ The original project used a Raspberry Pi 4 for this procedure. Select the model 
 2. Navigate to <strong>Misc utility images</strong>
 
 ![Misc utility images](./doc_images/select_misc_utility_images.png)
+
 3. Locate the bootloader or boot-method utility appropriate to your intended configuration.
 4. Select the relevant option
 
