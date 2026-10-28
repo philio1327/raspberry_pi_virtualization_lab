@@ -96,3 +96,33 @@ The original documentation used this menu to access the bootloader configuration
 ![Choose Storage](./doc_images/choose_storage.png) 
 
 4. Review the selected device before confirming the write operation.
+
+<details>
+   <summary>View screenshot</summary>
+
+   ![Confirm Write Operation](./doc_images/confirm_write_operation.png)
+</details>
+
+<strong>Important:</strong> The selected microSD card is the destination for the utility image. Selecting the wrong storage device can cause unintended data loss!
+
+5. Continue through the confirmation prompts to write the image.
+
+Wait for the application to finish writing and verifying the data. Do not remove the card while the operation is in progress.
+
+## 7. Boot the Raspberry Pi and verify the result 
+
+1. Safely remove the microSD card after the imaging process completes.
+2. Insert it into the Raspberry Pi
+3. Connect a monitor using a compatible display cable if local verification is required.
+
+![HDMI To MicroUSB Cable](./doc_images/monitor_cable.jpg)
+5. Power on the Raspberry Pi and observe the displayed output. It should be a fully green monitor like the picture below if you are using the same model.
+
+![Green display monitor](./doc_images/green_display_monitor.jpg)
+
+Note: Because display behaviour may vary by model, utility image, and software version, confirm the expected indicator for the utility you selected before treating this as definitive verification. 
+
+
+
+
+6. Review the selected device before confirming the write operation.
