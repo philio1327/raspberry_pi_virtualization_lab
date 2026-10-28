@@ -61,3 +61,27 @@ Also, choose an image supported by your device and appropriate for your intended
    </details>
 
 The original setup used a Raspberry Pi 3 Model B. Select the model you are actually configuring.
+
+## 3. Select the OpenWRT image
+
+1. Open <strong>Choose OS</strong>
+   <details>
+     <summary>View screenshot</summary>
+      
+     ![Select Correct OS](./doc_images/openwrt_choose_os.png)
+   </details>
+2. Scroll down and select <strong>Use custom</strong>
+   <details>
+     <summary>View screenshot</summary>
+      
+     ![Select Custom Image](./doc_images/openwrt_use_custom.png)
+   </details>
+3. Browse to the OpenWRT firmware image downloaded in Step 1.
+4. Select the image and confirm that the chosen file matches your target device.
+   <details>
+     <summary>View screenshot</summary>
+      
+     ![Select Correct Image File](./doc_images/openwrt_choose_image.png)
+   </details>
+
+The downloaded filename may differ from the one shown in the screenshot. This is expected if the firmware version or image naming convention has changed.
