@@ -161,7 +161,47 @@ D. Copy the generated password into the password field in Raspberry Pi Imager's 
 
 ![Insert Password](./doc_images/openwrt_os_customization_password.png)
 
-4. If configuring SSH public-key authentication, generate a key pair on your own computer and provide only the public key.
+4. If configuring SSH public-key authentication, generate a key pair on your own computer and provide only the public key. Go to the <strong>Services</strong> tab on the Raspberry Pi Imager. From here select <strong>Enable SSH</strong> and select <strong>Allow public-key authentication only</strong>
+
+<details>
+   <summary>View screenshot</summary>
+
+   ![Public-key authentication](./doc_images/openwrt_enable_ssh.png)
+</details>
+
+### Generating an SSH Key Pair
+
+SSH (Secure Shell) allows you to manage a device remotely through an encrypted connection. SSH keys provide an alternative to password-based authentication. 
+
+An SSH key pair consists of two files:
+- <strong>Private key:</strong> Remains on your computer. Never share it or upload it to Github.
+- <strong>Public key:</strong> Can be installed on the Raspberry Pi to authenticate SSH connections.
+
+For this lab we wll generate a new SSH key pair dedicated to the OpenWRT setup.
+
+A. Open a terminal
+
+On Windows, open <strong>Powershell</strong> or <strong>Windows Terminal</strong>. On macOS or Linux, open your terminal application.
+The commands below will work with a standard OpenSSH installation.
+
+B. Generate the SSH key pair
+
+Run the following command:
+<code>ssh-keygen -t ed25519 -C "openwrt-lab"</code>
+
+Follow the prompts:
+
+-> When asked where to save the key, enter a filename for this lab-specific key pair. For example, use 
+~/.ssh/openwrt_lab.
+-> When asked for a passphrase, enter one to protect your private key. You can leave it empty but using a passphrase provides additional protection. 
+-> Confirm the passphrase if prompted.
+
+The resulting files will be:
+- Private key: ~/.ssh/openwrt_lab
+- Public key: ~/.ssh/openwrt_lab.pub
+
+If you choose a 
+
 5. Review the settings before continuing.
 
 
