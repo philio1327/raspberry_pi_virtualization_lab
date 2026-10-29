@@ -193,14 +193,46 @@ Follow the prompts:
 
 -> When asked where to save the key, enter a filename for this lab-specific key pair. For example, use 
 ~/.ssh/openwrt_lab.
+
 -> When asked for a passphrase, enter one to protect your private key. You can leave it empty but using a passphrase provides additional protection. 
+
 -> Confirm the passphrase if prompted.
 
 The resulting files will be:
 - Private key: ~/.ssh/openwrt_lab
 - Public key: ~/.ssh/openwrt_lab.pub
 
-If you choose a 
+If you choose a different filename or directory, use that location in the following steps.
+
+C. Display and copy the public key
+
+On Windows PowerShell:
+<code>Get-Content ~/.ssh/openwrt_lab.pub</code>
+
+On macOS or Linux:
+<code>cat ~/.ssh/openwrt_lab.pub</code>
+
+Copy the entire output. It should be one line beginning with ssh-ed25519, followed by an encoded string and the comment openwrt-lab. 
+
+<strong>Only copy the public key file ending in .pub. Never share or upload the private key.</strong>
+
+D. Add the public key in Raspberry Pi Imager
+
+In Raspberry Pi Imager's customization settings, paste the copied public key into the SSH public key field, if available for the selected image and Imager version. It'll look similar to the screenshot below (note I used openWRT_key as the filename):
+
+<details>
+   <summary>View screenshot</summary>
+
+   ![Public Key Example](./doc_images/openwrt_public_key_example.png)
+</details>
+
+Configure the remaining settings, including the username and password, as appropriate for the OpenWRT image. Write the image to the microSD card and boot the Raspberry Pi. 
+
+<details>
+   <summary>View screenshot</summary>
+
+   ![Confirm OS Settings and Write](./doc_images/openwrt_confirm_os_settings.png)
+</details>
 
 5. Review the settings before continuing.
 
