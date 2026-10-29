@@ -97,4 +97,44 @@ The downloaded filename may differ from the one shown in the screenshot. This is
 
 ## 5. Configure authentication settings
 
-The original procedure 
+The original procedure included an OS customization step for setting a password and adding an SSH public key before writing the image.
+
+1. Open <strong>Edit Settings</strong> if Raspberry Pi Imager offers supported customization options for the selected image.
+   <details>
+     <summary>View screenshot</summary>
+      
+     ![Select correct OS](./doc_images/openwrt_edit_settings.png)
+   </details>
+2. Configure a strong, unique administrative password if the image workflow supports it. Below is my python code that uses the cryptographically secure <strong>secrets</strong> module. If you are not using this, whatever password you select, I suggest making sure it doesn't exist in the rockyou.txt rainbow table that exists that can crack passwords. Here is the sample code:
+
+<code>
+import secrets
+import string
+
+"Define the characters available in the password."
+charset = string.ascii_letters + string.digits + string.punctuation
+
+"Request a password length."
+while True:
+    try:
+        length = int(input("Enter password length (minimum 16): "))
+
+        if length < 16:
+            print("Please enter a length of at least 16 characters.")
+            continue
+
+        break
+    except ValueError:
+        print("Invalid input. Please enter a positive integer.")
+
+"Generate the password using a cryptographically secure source."
+password = ''.join(secrets.choice(charset) for _ in range(length))
+
+print(f"\nGenerated password: {password}")
+</code>
+
+<strong>Note:</strong> if you use this code, DO NOT STORE YOUR PASSWORD IN A PUBLICLY ACCESSIBLE REPOSITORY
+
+
+
+
