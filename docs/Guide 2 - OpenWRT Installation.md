@@ -145,6 +145,7 @@ B. Run it with Python (use the following command after navigating to the folder 
    <code> python generate_password.py</code>
 
 C. Enter the desired password length when prompted.
+
 D. Copy the generated password into the password field in Raspberry Pi Imager's customization settings.
 
 <strong>Note:</strong> if you use this code, DO NOT STORE YOUR PASSWORD IN A PUBLICLY ACCESSIBLE REPOSITORY
