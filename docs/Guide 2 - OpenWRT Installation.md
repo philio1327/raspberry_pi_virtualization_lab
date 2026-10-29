@@ -111,10 +111,10 @@ The original procedure included an OS customization step for setting a password 
 import secrets
 import string
 
-# Define the characters available in the password.
+### Define the characters available in the password.
 charset = string.ascii_letters + string.digits + string.punctuation
 
-# Request a password length.
+### Request a password length.
 while True:
     try:
         length = int(input("Enter password length (minimum 16): "))
@@ -127,7 +127,7 @@ while True:
     except ValueError:
         print("Invalid input. Please enter a positive integer.")
 
-# Generate the password using a cryptographically secure source.
+### Generate the password using a cryptographically secure source.
 password = ''.join(secrets.choice(charset) for _ in range(length))
 
 print(f"\nGenerated password: {password}")
