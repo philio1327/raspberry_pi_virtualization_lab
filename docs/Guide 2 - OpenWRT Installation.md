@@ -226,7 +226,7 @@ In Raspberry Pi Imager's customization settings, paste the copied public key int
    ![Public Key Example](./doc_images/openwrt_public_key_example.png)
 </details>
 
-Configure the remaining settings, including the username and password, as appropriate for the OpenWRT image. Write the image to the microSD card and boot the Raspberry Pi. 
+Configure the remaining settings, including the username and password, as appropriate for the OpenWRT image. Write the image to the microSD card and boot the Raspberry Pi with the SD Card inserted. 
 
 <details>
    <summary>View screenshot</summary>
@@ -234,8 +234,39 @@ Configure the remaining settings, including the username and password, as approp
    ![Confirm OS Settings and Write](./doc_images/openwrt_confirm_os_settings.png)
 </details>
 
-5. Review the settings before continuing.
+E. Verify SSH access
 
+Once the Raspberry Pi has booted and is connected to the network switch via Ethernet cable, try connecting to it via your computer that is also connected via ethernet to the switch. 
+
+<code>ssh -i ~/.ssh/openwrt_lab <username>@192.168.1.1</code>
+
+Replace <username> with the account configured for your image. On Windows, the same command works in PowerShell or Windows Terminal when OpenSSH is installed. 
+
+The exact username, SSH service configuration, and authentication behaviour depend on the OpenWRT image and its first-boot configuration. IF the connection fails, verify that SSH is enabled, the public key was installed correctly, and the username and IP address are correct. 
+
+# Back to earlier steps 
+## 5. Connect and boot the Raspberry Pi
+
+1. Insert the prepared microSD card with OpenWRT on it into the Raspberry Pi.
+2. Connect the Raspberry Pi to the network switch using Ethernet.
+3. Connect your computer to the same switch.
+4. Power on the Raspberry Pi and allow it time to boot.
+
+Note you will most likely need to disable wifi connections on your computer so there is no conflict between your ISP router's DHCP addressing and the router we are setting up via the OpenWRT image. 
+
+## 6. Access the LuCI web interface
+
+1. Open a web browser on the computer connected to the same network.
+2. Navigate to http://192.168.1.1 if the device is using the original procedure's default address.
+3. Sign in using the crednetials configured for your installation.
+
+The original setup used 192.168.1.1 to access the LuCI interface. If the interface is unreachable, verify the computer's network connection, the Raspberry Pi's boot status, and the device's current IP configuration.
+
+![LuCI login](./doc_images/openwrt_luci_interface_login.png)
+
+After inputting the login credentials, you should see the following: 
+
+![LuCI login successful](./doc_images/openwrt_login_successful.png)
 
 
 
