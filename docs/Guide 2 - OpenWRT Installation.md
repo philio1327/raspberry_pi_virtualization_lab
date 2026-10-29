@@ -144,13 +144,13 @@ After inputting the login credentials, you should see the following:
 
 ![LuCI login successful](./doc_images/openwrt_login_successful.png)
 
-## Verification and scope
+### Verification and scope
 
 The screenshots above document a successful access to the LuCI web interface. This is an intial installation check; it does not alone establish that DHCP, DNS, or network isolation are configured. 
 
 The wider project uses OpenWRT to provide network services to its virtualization environment. Those settings should be documented and verified separately from the initial firmware installation. 
 
-## Security and operational considerations
+### Security and operational considerations
 
 - Download firmware from the official OpenWRT Firmware Selector.
 - Confirm the target device and storage medium before writing an image.
@@ -160,13 +160,13 @@ The wider project uses OpenWRT to provide network services to its virtualization
 - Avoid exposing the administrative interface to untrusted networks.
 - Document relevant hardware and firmware versions for reproducibility.
 
-## Limitations
+### Limitations
 
 This guide covers initial firmware preparation, booting and access to the LuCI interface. It does not document the complete DHCP configuration, DNS Records, static leases, or the final network design. Those steps are done in a later guide.
 
 ---
 
-### Generating a Secure Password with Python
+## Generating a Secure Password with Python
 Before configuring the OpenWRT image, you can generate a strong password using Python's secrets module. Unlike random, secrets is designed for security-sensitive applications and uses a cryptographically secure source of randomness.
 
 The following script generates a password with a minimum length of 16 characters, using uppercase and lowercase letters, digits, and punctuation.
@@ -215,7 +215,9 @@ D. Copy the generated password into the password field in Raspberry Pi Imager's 
 - This script selects from the combined character set but does not guarantee that every character category appears in each password.
 - The Raspberry Pi Imager customization workflow depends on the firmware image and software version; verify that your selected OpenWRT image supports the settings you configure.
 
-### Generating an SSH Key Pair
+---
+
+## Generating an SSH Key Pair
 
 SSH (Secure Shell) allows you to manage a device remotely through an encrypted connection. SSH keys provide an alternative to password-based authentication. 
 
