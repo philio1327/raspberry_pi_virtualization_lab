@@ -85,3 +85,16 @@ The original setup used a Raspberry Pi 3 Model B. Select the model you are actua
    </details>
 
 The downloaded filename may differ from the one shown in the screenshot. This is expected if the firmware version or image naming convention has changed.
+
+## 4. Select the microSD card
+
+1. Open <strong>Choose Storage</strong>
+2. Identify the microSD card by its name and capacity.
+3. Select the correct card.
+4. Review the selected device before continuing.
+
+<strong>Important: </strong> Raspberry Pi Imager will overwrite the selected storage device. Do not proceed unless you have confirmed that the target is the intended microSD card.
+
+## 5. Configure authentication settings
+
+The original procedure 
