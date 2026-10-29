@@ -139,12 +139,12 @@ print(f"\nGenerated password: {password}")
 ```
 
 #### How to use it:
-1. Save the code in a file named <code>generate_password.py</code>
-2. Run it with Python (use the following command after navigating to the folder this file is contained in terminal or click Run if using a Python interpreter like Pycharm with the file open):
+A. Save the code in a file named <code>generate_password.py</code>
+B. Run it with Python (use the following command after navigating to the folder this file is contained in terminal or click Run if using a Python interpreter like Pycharm with the file open):
    <code> python generate_password.py</code>
       
-3. Enter the desired password length when prompted.
-4. Copy the generated password into the password field in Raspberry Pi Imager's customization settings.
+C. Enter the desired password length when prompted.
+D. Copy the generated password into the password field in Raspberry Pi Imager's customization settings.
 
 <strong>Note:</strong> if you use this code, DO NOT STORE YOUR PASSWORD IN A PUBLICLY ACCESSIBLE REPOSITORY
 
@@ -158,6 +158,9 @@ print(f"\nGenerated password: {password}")
 3. Once you've created your password, paste it here in the general tab of the OS Customization section:
 
 ![Insert Password](./doc_images/openwrt_os_customization_password.png)
+
+4. If configuring SSH public-key authentication, generate a key pair on your own computer and provide only the public key.
+5. Review the settings before continuing.
 
 
 
