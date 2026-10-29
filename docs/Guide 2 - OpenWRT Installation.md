@@ -121,7 +121,7 @@ The original procedure included an OS customization step for setting a password 
 
 See <strong>Generating an SSH key pair</strong> section later in this Guide for more details on how to generate a new key pair if you don't already have one.
 
-## 5. Connect and boot the Raspberry Pi
+## 6. Connect and boot the Raspberry Pi
 
 1. Insert the prepared microSD card with OpenWRT on it into the Raspberry Pi.
 2. Connect the Raspberry Pi to the network switch using Ethernet.
@@ -130,7 +130,7 @@ See <strong>Generating an SSH key pair</strong> section later in this Guide for 
 
 Note you will most likely need to disable wifi connections on your computer so there is no conflict between your ISP router's DHCP addressing and the router we are setting up via the OpenWRT image. 
 
-## 6. Access the LuCI web interface
+## 7. Access the LuCI web interface
 
 1. Open a web browser on the computer connected to the same network.
 2. Navigate to http://192.168.1.1 if the device is using the original procedure's default address.
