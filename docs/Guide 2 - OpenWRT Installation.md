@@ -103,18 +103,23 @@ The original procedure included an OS customization step for setting a password 
    <details>
      <summary>View screenshot</summary>
       
-     ![Select correct OS](./doc_images/openwrt_edit_settings.png)
+     ![Edit OS Settings](./doc_images/openwrt_edit_settings.png)
    </details>
 2. Configure a strong, unique administrative password if the image workflow supports it. Below is my python code that uses the cryptographically secure <strong>secrets</strong> module. If you are not using this, whatever password you select, I suggest making sure it doesn't exist in the rockyou.txt rainbow table that exists that can crack passwords. Here is the sample code:
 
-<code>
+### Generating a Secure Password with Python
+Before configuring the OpenWRT image, you can generate a strong password using Python's secrets module. Unlike random, secrets is designed for security-sensitive applications and uses a cryptographically secure source of randomness.
+
+The following script generates a password with a minimum length of 16 characters, using uppercase and lowercase letters, digits, and punctuation.
+
+```python
 import secrets
 import string
 
-"Define the characters available in the password."
+# Define the characters available in the password.
 charset = string.ascii_letters + string.digits + string.punctuation
 
-"Request a password length."
+# Request a password length.
 while True:
     try:
         length = int(input("Enter password length (minimum 16): "))
@@ -127,13 +132,38 @@ while True:
     except ValueError:
         print("Invalid input. Please enter a positive integer.")
 
-"Generate the password using a cryptographically secure source."
+# Generate the password using a cryptographically secure source.
 password = ''.join(secrets.choice(charset) for _ in range(length))
 
 print(f"\nGenerated password: {password}")
-</code>
+```
+
+#### How to use it:
+A. Save the code in a file named <code>generate_password.py</code>
+
+B. Run it with Python (use the following command after navigating to the folder this file is contained in terminal or click Run if using a Python interpreter like Pycharm with the file open):
+   <code> python generate_password.py</code>
+
+C. Enter the desired password length when prompted.
+
+D. Copy the generated password into the password field in Raspberry Pi Imager's customization settings.
 
 <strong>Note:</strong> if you use this code, DO NOT STORE YOUR PASSWORD IN A PUBLICLY ACCESSIBLE REPOSITORY
+
+#### Security considerations:
+- Use a password manager to store the generated password securely.
+- Never commit a reail password or other credentials to GitHub.
+- This script selects from the combined character set but does not guarantee that every character category appears in each password.
+- The Raspberry Pi Imager customization workflow depends on the firmware image and software version; verify that your selected OpenWRT image supports the settings you configure.
+
+## Back to Raspberry Pi Imager
+3. Once you've created your password, paste it here in the general tab of the OS Customization section:
+
+![Insert Password](./doc_images/openwrt_os_customization_password.png)
+
+4. If configuring SSH public-key authentication, generate a key pair on your own computer and provide only the public key.
+5. Review the settings before continuing.
+
 
 
 
