@@ -258,7 +258,7 @@ Note you will most likely need to disable wifi connections on your computer so t
 
 1. Open a web browser on the computer connected to the same network.
 2. Navigate to http://192.168.1.1 if the device is using the original procedure's default address.
-3. Sign in using the crednetials configured for your installation.
+3. Sign in using the credentials configured for your installation.
 
 The original setup used 192.168.1.1 to access the LuCI interface. If the interface is unreachable, verify the computer's network connection, the Raspberry Pi's boot status, and the device's current IP configuration.
 
