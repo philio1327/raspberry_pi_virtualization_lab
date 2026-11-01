@@ -43,3 +43,17 @@ For multiple Raspberry Pi hosts, repeat the preparation and installation process
 - <a href="https://github.com/philio1327/raspberry_pi_virtualization_lab/blob/main/docs/Guide%202%20-%20OpenWRT%20Installation.md">OpenWRT Installation on Raspberry Pi</a>
 - <a href="https://github.com/philio1327/raspberry_pi_virtualization_lab/blob/main/docs/Guide%203%20-%20USB%20Storage%20Preparation%20for%20ESXi.md">USB Storage Preparation</a>
 
+## 2. Prepare the microSD Card for ESXi
+
+The microSD card will contain the Raspberry Pi firmware and UEFI bootloader required to initialize the hardware and launch ESXi.
+
+### 2.1 Install Raspberry Pi OS
+
+1. Download and install <a href="https://www.raspberrypi.com/software/">Raspberry Pi Imager</a>, if you haven't already.
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![Raspberry Pi Imager Download](./doc_images/esxi_install_rasbian.png)
+</details>
+
