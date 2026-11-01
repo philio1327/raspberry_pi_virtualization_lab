@@ -84,6 +84,7 @@ The first partition will be 8 GB and reserved for the ESXi boot and host files.
 
   ![New Simple Volume](./doc_images/usb_storage_new_partition.png)
 </details>
+
 3. When prompted for the volume size, enter 8192 MB.
 
 <details>
@@ -91,6 +92,7 @@ The first partition will be 8 GB and reserved for the ESXi boot and host files.
 
   ![Specify Volume Size](./doc_images/usb_storage_specify_size.png)
 </details>
+
 4. Click <strong>Next</strong>.
 
 
