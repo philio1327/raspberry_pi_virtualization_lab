@@ -40,6 +40,6 @@ For multiple Raspberry Pi hosts, repeat the preparation and installation process
 ### Related Guides
 
 - <a href="https://github.com/philio1327/raspberry_pi_virtualization_lab/blob/main/docs/Guide%201%20-%20Raspberry%20Pi%20Boot%20Configuration.md">Raspberry Pi Boot Configuration</a>
-- <a href="">OpenWRT Installation on Raspberry Pi</a>
+- <a href="https://github.com/philio1327/raspberry_pi_virtualization_lab/blob/main/docs/Guide%202%20-%20OpenWRT%20Installation.md">OpenWRT Installation on Raspberry Pi</a>
 - <a href="">USB Storage Preparation</a>
 
