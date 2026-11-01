@@ -29,7 +29,7 @@ For this configuration, a larger USB drive is preferable because the second part
 <details>
   <summary>View screenshot</summary>
 
-  ![Windows Taskbar](./doc_image/usb_storage_taskbar.png)
+  ![Windows Taskbar](./doc_images/usb_storage_taskbar.png)
 </details>
 
 3. Type <code>Disk Management </code>
