@@ -57,3 +57,33 @@ The microSD card will contain the Raspberry Pi firmware and UEFI bootloader requ
   ![Raspberry Pi Imager Download](./doc_images/esxi_install_rasbian.png)
 </details>
 
+2. Insert a microSD card into your computer using an SD card reader or USB adapter.
+<details>
+  <summary>View screenshot</summary>
+
+  ![USB Adapter](./doc_images/esxi_install_usb_adapter.png)
+</details>
+
+3. Open Raspberry Pi Imager.
+4. Select the appropriate Raspberry Pi device. For this project, select Raspberry Pi 4.
+<details>
+  <summary>View screenshot</summary>
+
+  ![Choose Device](./doc_images/esxi_install_choose_device.png)
+</details>
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![Choose Raspberry Pi 4](./doc_images/esxi_install_choose_rasp4.png)
+</details>
+5. Under <strong>Choose OS</strong>, select Raspberry Pi OS Lite (64-bit).
+6. Select the correct microSD card under <strong>Choose Storage</strong>.
+7. Review the selected device carefully before writing.
+
+The purpose of this installation is to update the Raspberry Pi and its EEPROM bootloader. Raspberry Pi OS will be erased later in the procedure. 
+
+⚠️ <strong>Warning</strong>: Writing an operating system to the microSD card erases its existing contents. Verify that you have selected the correct storage device. 
+
+### 2.2 Boot the Raspberry Pi and Update the System 
+
