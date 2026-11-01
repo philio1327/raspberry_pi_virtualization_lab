@@ -163,7 +163,18 @@ This filesystem was selected in the original project because it accommodates lar
   ![Create Larger Partition](./doc_images/usb_storage_create_larger_partition.png)
 </details>
 
-Wait for Windows to complete formatting. Once complete, you should have 2 partitions on your USB storage device and will look similar to the following:
+Wait for Windows to complete formatting. 
+
+## 8. Verify the Partition Layout
+
+Once both partitions have been created, return to the main Disk Management window. 
+
+Verify that the USB device contains:
+
+- An 8 GB FAT32 partition labelled ESXI_BOOT (or your own label).
+- A second exFAT partition occupying the remaining available space, labelled VM_STORAGE (or your own label).
+
+The final layout should resemble the following:
 
 <details>
   <summary>View screenshot</summary>
@@ -171,3 +182,17 @@ Wait for Windows to complete formatting. Once complete, you should have 2 partit
   ![Finished Creating Partitions](./doc_images/usb_storage_finished_creating_partitions.png)
 </details>
 
+Your USB storage device is now prepared according to the partition layout used in this project.
+
+### Scope and Limitations
+
+This procedure documents the partition preparation in the original project using Windows Disk Management. 
+
+The two partitions are intended for different purposes:
+
+- The FAT32 partition reserves 8 GB for ESXi boot and host files.
+- The exFAT partition reserves the remaining capacity for virtual machine storage.
+
+This guide does not demonstrate ESXi installation, datastore creation, or VM deployment. Those operations are separate stages of the virtualization setup. 
+
+<strong>Important</strong>: The filesystem choices documented here describe the Windows preparation procedure. They should not be interpreted as confirmation that ESXi can directly use the exFAT partition as a VM datastore. ESXi datastore creation and supported storage formats are addressed in the subsequent configuration guides. 
