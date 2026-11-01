@@ -96,7 +96,21 @@ The microSD card will contain the Raspberry Pi firmware and UEFI bootloader requ
 
   ![Choose Raspberry Pi Lite](./doc_images/esxi_install_choose_rasp_pi_lite.png)
 </details>
+
 6. Select the correct microSD card under <strong>Choose Storage</strong>.
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![Choose Storage](./doc_images/esxi_install_choose_storage.png)
+</details>
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![Choose Correct Storage](./doc_images/esxi_install_choose_correct_storage.png)
+</details>
+
 7. Review the selected device carefully before writing.
 
 The purpose of this installation is to update the Raspberry Pi and its EEPROM bootloader. Raspberry Pi OS will be erased later in the procedure. 
