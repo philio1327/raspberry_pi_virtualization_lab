@@ -105,9 +105,68 @@ The original procedure included an OS customization step for setting a password 
       
      ![Edit OS Settings](./doc_images/openwrt_edit_settings.png)
    </details>
-2. Configure a strong, unique administrative password if the image workflow supports it. Below is my python code that uses the cryptographically secure <strong>secrets</strong> module. If you are not using this, whatever password you select, I suggest making sure it doesn't exist in the rockyou.txt rainbow table that exists that can crack passwords. Here is the sample code:
+2. Configure a strong, unique administrative password if the image workflow supports it. Below is my python code that uses the cryptographically secure <strong>secrets</strong> module. If you are not using this, whatever password you select, I suggest making sure it doesn't exist in the rockyou.txt rainbow table that exists that can crack passwords. See <strong>Generating Secure Password with Python</strong> section towards the end of this Guide for help with this.
 
-### Generating a Secure Password with Python
+3. Once you've created your password, paste it here in the general tab of the OS Customization section:
+
+![Insert Password](./doc_images/openwrt_os_customization_password.png)
+
+4. If configuring SSH public-key authentication, generate a key pair on your own computer and provide only the public key. Go to the <strong>Services</strong> tab on the Raspberry Pi Imager. From here select <strong>Enable SSH</strong> and select <strong>Allow public-key authentication only</strong>
+
+<details>
+   <summary>View screenshot</summary>
+
+   ![Public-key authentication](./doc_images/openwrt_enable_ssh.png)
+</details>
+
+See <strong>Generating an SSH key pair</strong> section later in this Guide for more details on how to generate a new key pair if you don't already have one.
+
+## 6. Connect and boot the Raspberry Pi
+
+1. Insert the prepared microSD card with OpenWRT on it into the Raspberry Pi.
+2. Connect the Raspberry Pi to the network switch using Ethernet.
+3. Connect your computer to the same switch.
+4. Power on the Raspberry Pi and allow it time to boot.
+
+Note you will most likely need to disable wifi connections on your computer so there is no conflict between your ISP router's DHCP addressing and the router we are setting up via the OpenWRT image. 
+
+## 7. Access the LuCI web interface
+
+1. Open a web browser on the computer connected to the same network.
+2. Navigate to http://192.168.1.1 if the device is using the original procedure's default address.
+3. Sign in using the credentials configured for your installation. Default username and password are: <strong>root</strong> and <blank>
+
+The original setup used 192.168.1.1 to access the LuCI interface. If the interface is unreachable, verify the computer's network connection, the Raspberry Pi's boot status, and the device's current IP configuration.
+
+![LuCI login](./doc_images/openwrt_luci_interface_login.png)
+
+After inputting the login credentials, you should see the following: 
+
+![LuCI login successful](./doc_images/openwrt_login_successful.png)
+
+### Verification and scope
+
+The screenshots above document a successful access to the LuCI web interface. This is an intial installation check; it does not alone establish that DHCP, DNS, or network isolation are configured. 
+
+The wider project uses OpenWRT to provide network services to its virtualization environment. Those settings should be documented and verified separately from the initial firmware installation. 
+
+### Security and operational considerations
+
+- Download firmware from the official OpenWRT Firmware Selector.
+- Confirm the target device and storage medium before writing an image.
+- Use strong, unique administrative credentials.
+- Keep private SSH keys private; only distribute public keys when required.
+- Verify which customization options are supported by the selected firmware image.
+- Avoid exposing the administrative interface to untrusted networks.
+- Document relevant hardware and firmware versions for reproducibility.
+
+### Limitations
+
+This guide covers initial firmware preparation, booting and access to the LuCI interface. It does not document the complete DHCP configuration, DNS Records, static leases, or the final network design. Those steps are done in a later guide.
+
+---
+
+## Generating a Secure Password with Python
 Before configuring the OpenWRT image, you can generate a strong password using Python's secrets module. Unlike random, secrets is designed for security-sensitive applications and uses a cryptographically secure source of randomness.
 
 The following script generates a password with a minimum length of 16 characters, using uppercase and lowercase letters, digits, and punctuation.
@@ -156,20 +215,9 @@ D. Copy the generated password into the password field in Raspberry Pi Imager's 
 - This script selects from the combined character set but does not guarantee that every character category appears in each password.
 - The Raspberry Pi Imager customization workflow depends on the firmware image and software version; verify that your selected OpenWRT image supports the settings you configure.
 
-## Back to Raspberry Pi Imager
-3. Once you've created your password, paste it here in the general tab of the OS Customization section:
+---
 
-![Insert Password](./doc_images/openwrt_os_customization_password.png)
-
-4. If configuring SSH public-key authentication, generate a key pair on your own computer and provide only the public key. Go to the <strong>Services</strong> tab on the Raspberry Pi Imager. From here select <strong>Enable SSH</strong> and select <strong>Allow public-key authentication only</strong>
-
-<details>
-   <summary>View screenshot</summary>
-
-   ![Public-key authentication](./doc_images/openwrt_enable_ssh.png)
-</details>
-
-### Generating an SSH Key Pair
+## Generating an SSH Key Pair
 
 SSH (Secure Shell) allows you to manage a device remotely through an encrypted connection. SSH keys provide an alternative to password-based authentication. 
 
@@ -226,7 +274,7 @@ In Raspberry Pi Imager's customization settings, paste the copied public key int
    ![Public Key Example](./doc_images/openwrt_public_key_example.png)
 </details>
 
-Configure the remaining settings, including the username and password, as appropriate for the OpenWRT image. Write the image to the microSD card and boot the Raspberry Pi. 
+Configure the remaining settings, including the username and password, as appropriate for the OpenWRT image. Write the image to the microSD card and boot the Raspberry Pi with the SD Card inserted. 
 
 <details>
    <summary>View screenshot</summary>
@@ -234,9 +282,12 @@ Configure the remaining settings, including the username and password, as approp
    ![Confirm OS Settings and Write](./doc_images/openwrt_confirm_os_settings.png)
 </details>
 
-5. Review the settings before continuing.
+E. Verify SSH access
 
+Once the Raspberry Pi has booted and is connected to the network switch via Ethernet cable, try connecting to it via your computer that is also connected via ethernet to the switch. 
 
+<code>ssh -i ~/.ssh/openwrt_lab <username>@192.168.1.1</code>
 
+Replace <username> with the account configured for your image. On Windows, the same command works in PowerShell or Windows Terminal when OpenSSH is installed. 
 
-
+The exact username, SSH service configuration, and authentication behaviour depend on the OpenWRT image and its first-boot configuration. IF the connection fails, verify that SSH is enabled, the public key was installed correctly, and the username and IP address are correct. 
