@@ -70,3 +70,27 @@ Once the existing volumes have been deleted, the available space should appear a
   ![Unallocated Storage](./doc_images/usb_storage_unallocated_storage.png)
 </details>
 
+<strong>Note: </strong>Windows may display a small reserved area on the device. The available partition space may therefore be slightly smaller than the advertised capacity of the USB drive. In my case, there is a 100MB Partition reserved for the USB drive's internal mechanisms for formatting which cannot be used to store files.
+
+## 3. Create the First Partition
+
+The first partition will be 8 GB and reserved for the ESXi boot and host files.
+
+1. Right-click the unallocated space on the USB device.
+2. Select <strong>New Simple Volume</strong>
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![New Simple Volume](./doc_images/usb_storage_new_partition.png)
+</details>
+3. When prompted for the volume size, enter 8192 MB.
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![Specify Volume Size](./doc_images/usb_storage_specify_size.png)
+</details>
+4. Click <strong>Next</strong>.
+
+
