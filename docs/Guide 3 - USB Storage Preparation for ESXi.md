@@ -111,3 +111,63 @@ Windows will ask you to assign a drive letter to the new partition.
 You can use any available drive letter. The letter shown in the original setup is not universal and may differ on your computer. 
 
 ## 5. Format the First Partition as FAT32
+
+The first partition will use the FAT32 filesystem.
+
+1. Select <strong>Format this volume with the following settings.</strong>
+2. Choose <strong>FAT32</strong> as the filesystem.
+3. Enter a descriptive volume label, such as ESXI_BOOT.
+4. Leave the remaining settings at their defaults unless you have a specific reason to change them.
+5. Click <strong>Next</strong>, then <strong>Finish</strong>.
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![Create FAT32 Partition](./doc_images/usb_storage_fat32_partition.png)
+</details>
+
+Wait for Windows to complete the formatting process. Once finished, the partition should look similar to this:
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![Created FAT32 Partition](./doc_images/usb_storage_created_partition.png)
+</details>
+
+## 6. Create the Second Partition
+
+The remaining unallocated space will be used for the second partition. 
+
+1. Right-click the remaining unallocated space on the same USB device.
+2. Select <strong>New Simple Volume</strong>.
+3. Use the maximum available volume size so that the second partition occupies the remaining capacity.
+4. Click <strong>Next</strong>.
+5. Assign an available drive letter.
+6. Click <strong>Next</strong>.
+
+## 7. Format the Second Partition as exFAT
+
+The second partition will use exFAT. 
+
+This filesystem was selected in the original project because it accommodates larger storage devices and larger files more conveniently than FAT32.
+
+1. Select <strong>Format this volume with the following settings</strong>.
+2. Choose <strong>exFAT</strong> as teh filesystem.
+3. Enter a descriptive volume label, such as VM_STORAGE.
+4. Leave the remaining settings at their defaults unless otherwise required.
+5. Click <strong>Next</strong>, then <strong>Finish</strong>
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![Create Larger Partition](./doc_images/usb_storage_create_larger_partition.png)
+</details>
+
+Wait for Windows to complete formatting. Once complete, you should have 2 partitions on your USB storage device and will look similar to the following:
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![Finished Creating Partitions](./doc_images/usb_storage_finished_creating_partitions.png)
+</details>
+
