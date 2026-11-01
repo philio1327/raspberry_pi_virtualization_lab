@@ -32,7 +32,7 @@ For this configuration, a larger USB drive is preferable because the second part
   ![Windows Taskbar](./doc_images/usb_storage_taskbar.png)
 </details>
 
-3. Type <code>Disk Management </code>
+3. Type <code>Disk Management</code>
 4. Select <strong>Create and format hard disk partitions</strong>
 
 <details>
@@ -42,4 +42,31 @@ For this configuration, a larger USB drive is preferable because the second part
 </details>
 
 Windows Disk Management displays the connected storage devices, their partitions, and available space.
+
+## 2. Identify the USB Drive and Delete Existing Partitions
+
+⚠️ <strong>WARNING: THIS OPERATION CAN PERMANENTLY ERASE DATA </strong>
+
+Disk Management can be used to delete partitions and format entire storage devices, including your computer's internal system drive. 
+
+Before proceeding, carefully identify your USB storage device by its capacity and existing drive letter. Do not rely on the disk number shown in the original screenshots, as it will vary between computers.
+
+1. Locate your USB drive in the lower section of Disk Management.
+2. Verify that you have selected the correct device.
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![Select Removable Disk's Partition](./doc_images/usb_storage_disk_management.png)
+</details>
+3. If the device contains existing volumes, right-click each applicable volume and select <strong>Delete Volume</strong>.
+4. Confirm the deletion if prompted.
+
+Once the existing volumes have been deleted, the available space should appear as unallocated.
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![Unallocated Storage](./doc_images/usb_storage_unallocated_storage.png)
+</details>
 
