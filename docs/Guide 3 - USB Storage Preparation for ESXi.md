@@ -95,4 +95,19 @@ The first partition will be 8 GB and reserved for the ESXi boot and host files.
 
 4. Click <strong>Next</strong>.
 
+## 4. Assign a Drive Letter
 
+Windows will ask you to assign a drive letter to the new partition.
+
+1. Select an available drive letter.
+2. Click <strong>Next</strong>.
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![Assign Drive Letter](./doc_images/usb_storage_assign_drive_letter.png)
+</details>
+
+You can use any available drive letter. The letter shown in the original setup is not universal and may differ on your computer. 
+
+## 5. Format the First Partition as FAT32
