@@ -404,4 +404,49 @@ The original instructions explicitly specified GPT rather than MBR. Once the set
   ![Partition Scheme](./doc_images/esxi_install_partition_scheme.png)
 </details>
 
+## 4. Connect the Installation Hardware
+
+Before powering on the Raspberry Pi, connect the required hardware. 
+
+- Raspberry Pi 4
+- Prepared microSD card.
+- USB drive containing the ESXi installer.
+- Monitor connected through micro-HDMI.
+- USB keyboard.
+- Ethernet connection. 
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![Hardware](./doc_images/esxi_install_hardware.png)
+</details>
+
+In image, cables left to right are:
+- Power Cable
+- microHDMI to HDMI to monitor
+- USB keyboard
+- Lexar USB with ESXi VMware ISO
+- Ethernet cable for internet connection
+
+Insert the prepared microSD card into the Raspberry Pi and connect the ESXi installer USB. The Raspberry Pi should remain powered off until all connections are complete.
+
+## 5. Enter the UEFI Configuration Menu
+
+1. Power on the Raspberry Pi.
+2. As the Raspberry Pi starts, repeatedly press <strong>ESC</strong> on the connected keyboard.
+<details>
+  <summary>View screenshot</summary>
+
+  ![Boot Screen](./doc_images/esxi_install_press_esc.png)
+</details>
+
+3. Enter the UEFI configuration interface.
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![UEFI Menu](./doc_images/esxi_install_uefi_menu.jpg)
+</details>
+
+The UEFI menu provides access to the boot settings and hardware configuration needed for ESXi. 
 
