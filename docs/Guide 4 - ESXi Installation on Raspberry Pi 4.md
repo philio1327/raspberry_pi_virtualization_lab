@@ -282,3 +282,29 @@ After extracting the Raspberry Pi archive:
 </details>
 
 4. If Windows reports duplicate files, skip the duplicates. 
+
+### 2.7 Remove Kernel Image Files
+
+Navigate to the root of the microSD card.
+
+Delete the <code>kernel.img</code> image files identified in the original procedure
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![Remove Kernel Images](./doc_images/esxi_install_remove_kernel_images.png)
+</details>
+
+### 2.8 Copy the UEFI Firmware Files
+
+1. Open the extracted Raspberry Pi 4 UEFI firmware directory.
+2. Select all files and folders inside it.
+3. Copy them to the root of the microSD card.
+4. If Windows reports duplicate files, replace the existing files with the new ones.
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![Copy UEFI Files](./doc_images/esxi_install_copy_uefi.png)
+</details>
+
