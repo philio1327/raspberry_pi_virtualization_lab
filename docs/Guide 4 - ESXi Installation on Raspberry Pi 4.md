@@ -308,3 +308,21 @@ Delete the <code>kernel.img</code> image files identified in the original proced
   ![Copy UEFI Files](./doc_images/esxi_install_copy_uefi.png)
 </details>
 
+### 2.9 Modify <code>config.txt</code>
+
+Open the <code>config.txt</code> file located on the microSD card.
+
+Add the following line at the end of the file:
+
+<code>gpu_mem=16</code>
+
+Save the file and safely eject the microSD card. 
+
+The microSD card is now prepared with the Raspberry Pi Firmware and UEFI bootloader required for the ESXi Installation process. 
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![Modify Config](./doc_images/esxi_install_modify_config.png)
+</details>
+
