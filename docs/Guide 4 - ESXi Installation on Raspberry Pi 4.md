@@ -388,3 +388,20 @@ Download the appropriate one for your version of Windows (go to taskbar and type
 6. Select the ISO image.
 
 ⚠️ <strong>Warning</strong>: This is a destructive operation. Rufus will erase and reformat the selected USB device. Back up any important files before continuing. 
+
+### 3.4 Configure the Partition Scheme and Cluster Size
+
+The original project used the following Rufus settings:
+
+Partition scheme: GPT
+Cluster Size: 32 kB
+
+The original instructions explicitly specified GPT rather than MBR. Once the settings are configured, click <strong>Start</strong> and allow Rufus to write the image to the USB device. When complete, safely eject the USB drive.
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![Partition Scheme](./doc_images/esxi_install_partition_scheme.png)
+</details>
+
+
