@@ -782,3 +782,46 @@ The screen should display the ESXi host's IP address.
 </details>
 
 This address is assigned through DHCP by the OpenWRT router configured in the earlier guide.
+
+## 14. Access the ESXi Web Interface
+
+Once the ESXi host has booted:
+
+1. Connect a computer to the same network as the Raspberry Pi. (Ethernet cable to switch)
+2. Open a web browser.
+3. Navigate to the IP address displayed on the ESXi console.
+4. Access the ESXi management interface.
+5. Login using the root account and the password configured during installation.
+
+The ESXi web interface provides access to the host's virtualization management features. 
+
+Record the IP address assigned to each Raspberry Pi. These addresses will be used in the subsequent network configuration and host management procedures.
+
+## Verification and Results
+
+The installation procedure is considered successful when:
+
+- The Raspberry Pi initializes using the prepared microSD card and UEFI firmware.
+- The ESXi installer boots from the dedicated installer USB.
+- ESXi installs onto the separate destination USB.
+- The UEFI boot order prioritizes the ESXi installation device.
+- The Raspberry Pi boots into ESXi without requiring the installer USB. ESXi console displays a network IP address.
+- The ESXi web interface is accessible from another computer on the network.
+
+In the original project, this process was used to configure multiple Raspberry Pi 4 devices as ESXi hosts.
+
+## Scope and Limitations
+
+This guide covers the preparation and installation of ESXi ARM on Raspberry Pi 4 hardware. 
+
+It does not cover:
+
+- Configuring DNS hostnames for ESXi hosts.
+- Creating or mounting VMFS datastores.
+- Registering multiple hosts in vCenter.
+- Uploading and provisioning guest Operating Systems.
+- Creating and testing virtual machine snapshots.
+
+These procedures are documented in subsequent guides. 
+
+The project used ESXi ARM on Raspberry Pi 4 hardware. Compatibility with other Raspberry Pi models and newer firmware versions should not be assumed.
