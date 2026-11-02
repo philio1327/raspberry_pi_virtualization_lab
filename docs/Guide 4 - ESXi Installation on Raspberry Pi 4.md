@@ -242,3 +242,43 @@ Once the firmware and EEPROM updates are complete, the Raspberry Pi OS installat
 
 6. Confirm the operation and wait for the erase process to complete.
 
+This reformats the microSD card in preparation for copying the Raspberry Pi firmware and UEFI files.
+
+⚠️ <strong>Verify the selected storage device before confirming. This operation erases the selected card.</strong>
+
+### 2.5 Download Raspberry Pi Firmware and UEFI Firmware
+
+Two separate firmware packages are required:
+
+1. <strong>Raspberry Pi Firmware</strong>: Provides the files required to initialize and boot the Raspberry Pi hardware.
+2. <strong>UEFI Firmware</strong>: Provides the UEFI environment required to boot the ESXi installer.
+
+The original project used the following sources:
+- Raspberry Pi Firmware: <a href="https://bit.ly/2HpIaG6">Raspberry Pi Firmware Repository</a>
+- Raspberry Pi 4 UEFI Firmware: <a href="https://github.com/pftf/RPi4/releases/">Project Firmware - Raspberry Pi 4 Releases</a>
+
+Download the appropriate versions and extract both archives. 
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![Extract Archives](./doc_images/esxi_install_extract_folders.png)
+</details>
+
+<strong>Compatibility Note</strong>: Use firmware versions appropriate for your Raspberry Pi model and the ESXi ARM build. The original project used Raspberry Pi 4 hardware. The original document also identified compatibility problems with Raspberry Pi 5, and those issues have since been resolved.
+
+### 2.6 Copy the Raspberry Pi Firmware Files
+
+After extracting the Raspberry Pi archive:
+
+1. Open the extracted <code>firmware-master</code> directory.
+2. Navigate to: <code>firmware/boot</code>
+3. Copy the contents of the <code>boot</code> folder to the root of the microSD card.
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![Paste Firmware Files](./doc_images/esxi_install_paste_firmware_files.png)
+</details>
+
+4. If Windows reports duplicate files, skip the duplicates. 
