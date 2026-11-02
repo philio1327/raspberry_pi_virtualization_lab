@@ -697,4 +697,88 @@ Disconnect the internet Ethernet connection and connect the Raspberry Pi to the 
 
 The ESXi installation and boot files now reside on the USB storage device. 
 
-## 12. 
+## 12. Configure the UEFI Boot Order
+
+The Raspberry Pi must boot from the USB device containing the installed ESXi hypervisor. 
+
+1. Power on or reboot the Raspberry Pi.
+2. Repeatedly press ESC to enter the UEFI interface.
+3. Navigate to <strong>Boot Maintenance Manager</strong>.
+<details>
+  <summary>View screenshot</summary>
+
+  ![Boot Maintenance Manager](./doc_images/esxi_install_boot_main.png)
+</details>
+
+4. Select <strong>Boot Options</strong>.
+<details>
+  <summary>View screenshot</summary>
+
+  ![Boot Options](./doc_images/esxi_install_boot_options.png)
+</details>
+
+5. Select <strong>Change Boot Order</strong>.
+<details>
+  <summary>View screenshot</summary>
+
+  ![Change Boot Order](./doc_images/esxi_install_change_boot_order.png)
+</details>
+
+6. Highlight the USB device containing the ESXi installation.
+7. Use the + key to move the USB device to the top of the boot order.
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![Change Order](./doc_images/esxi_images_change_order.png)
+</details>
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![Change Order](./doc_images/esxi_images_change_order2.png)
+</details>
+
+8. Press Enter to confirm.
+9. Press F10 to save the configuration changes.
+10. Press Y when prompted to confirm. 
+
+## 13. Verify the Boot Order and Start ESXi
+
+Return to the Boot Manager screen and verify that the ESXi installation USB is the first boot option.
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![Verify Boot Order](./doc_images/esxi_install_verify_boot_order.png)
+</details>
+
+Once confirmed:
+
+1. Return to the language selection screen.
+2. Select <strong>Continue</strong>.
+3. Allow the Raspberry Pi to boot.
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![Allow boot](./doc_images/esxi_install_allow_boot.png)
+</details>
+
+If the configuration is successful, the ESXi ARM interface should appear on the connected monitor.
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![Install Success](./doc_images/esxi_install_success.png)
+</details>
+
+The screen should display the ESXi host's IP address. 
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![IP Address](./doc_images/esxi_install_ip_address.png)
+</details>
+
+This address is assigned through DHCP by the OpenWRT router configured in the earlier guide.
