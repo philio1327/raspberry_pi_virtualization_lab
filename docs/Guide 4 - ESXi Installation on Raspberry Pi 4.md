@@ -521,5 +521,153 @@ Select <strong>Advanced Configuration</strong>
 
 The memory limiter configuration is now updated. 
 
+## 7. Boot the ESXi Installer
+
+The ESXi Installer is stored on the USB device created in Section 3.
+
+### 7.1 Open Boot Manager
+
+From the UEFI configuration interface, navigate to <strong>Boot Manager</strong>.
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![Boot Manager](./doc_images/esxi_install_boot_manager.png)
+</details>
+
+### 7.2 Select the ESXi Installer USB
+
+Select the USB drive containing the ESXi installer. DO NOT PRESS ENTER BEFORE READING NEXT STEP.
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![Select Installer USB](./doc_images/esxi_install_select_installer_usb.png)
+</details>
+
+Your USB should appear above UEFI PXEv4 network boot option. 
+
+### 7.3 Open the ESXi Boot Options
+
+After selecting the USB device, repeatedly press <strong>Shift + O</strong>.
+
+The ESXi boot command line should appear. 
+
+If the timing is missed and the installer proceeds without allowing the required boot parameter to be entered, restart the Raspberry Pi and repeat the boot selection procedure. Your screen will look half yellow if you missed the timing.
+
+### 7.4 Limit the ESXi OS Partition
+
+At the boot command line, enter:
+
+<code>autoPartitionOSDataSize=8192</code>
+
+Press Enter to continue. 
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![Limit OS Partition](./doc_images/esxi_install_limit_os_partition.png)
+</details>
+
+This configures ESXi to limit the OSData partition allocation to 8192 MB (8 GB), rather than using the entire installation USB device. 
+
+The intention is to reserve the remaining storage capacity for other uses, including storing operating system images externally.
+
+<strong>Note</strong>: This setting is part of the original installation procedure. Its behaviour may depend on the ESXi ARM build and installer version. 
+
+## 8. Accept the ESXi ARM License Agreement
+
+The ESXi installer will load. 
+
+When prompted to install the ESXi ARM Fling, review and accept the agreement(EULA) to continue.
+
+Follow the on-screen prompts until the installer reaches the disk selection screen. 
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![End-User License Agreement](./doc_images/esxi_install_license_agreement.png)
+</details>
+
+## 9. Select the ESXi Installation Destination
+
+The installer must be installed onto a separate USB device (different from the one containing the installation media).
+
+1. On the disk selection screen, identify the USB device containing the ESXi installer.
+<details>
+  <summary>View screenshot</summary>
+
+  ![View Installer](./doc_images/esxi_install_view_installer.png)
+</details>
+
+2. Do not select the installer USB.
+3. Insert the separate USB storage device intended for the ESXi installation.
+<details>
+  <summary>View screenshot</summary>
+
+  ![Insert USB](./doc_images/esxi_install_insert_usb.png)
+</details>
+
+4. Press F5 to refresh the device list.
+5. Wait for the additional USB to appear.
+6. Carefully identify the new device.
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![Select new USB](./doc_images/esxi_install_select_new_usb.png)
+</details>
+
+<strong>Warning</strong>: The selected installation destination will be overwritten. Ensure that the destination USB drive contains no data you need to preserve. 
+
+Select the separate USB storage device and press Enter. 
+Follow the subsequent confirmation prompts to proceed with the installation.
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![Press Enter](./doc_images/esxi_install_press_enter.png)
+</details>
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![Confirm Selection](./doc_images/esxi_install_confirm_usb_selection.png)
+</details>
+
+### Hardware Note
+
+The original procedure intially described using a larger USB device for the ESXi installation. During the final setup, a 32 GB SanDisk USB Device was used instead. 
+
+The original 128 GB USB Device was repurposed as a datastore later in the project. 
+
+The installation procedure remained the same.
+
+## 10. Configure the Keyboard and Root Password
+
+Once the installation destination has been selected: 
+
+1. Select the <strong>US Default</strong> keyboard layout.
+<details>
+  <summary>View screenshot</summary>
+
+  ![Select Keyboard](./doc_images/esxi_install_select_keyboard.png)
+</details>
+
+2. Press Enter
+3. Configure a root password when prompted.
+4. Confirm the password.
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![Confirm Password](./doc_images/esxi_install_confirm_password.png)
+</details>
+
+<strong>Important</strong>: Record the root password securely. It is required to access and administer the ESXi host. 
+
+The original documentation notes that forgetting the root password may require erasing the ESXi installation USB and reinstalling the hypervisor. 
+
+## 11. Confirm and Install ESXi
 
 
