@@ -326,3 +326,65 @@ The microSD card is now prepared with the Raspberry Pi Firmware and UEFI bootloa
   ![Modify Config](./doc_images/esxi_install_modify_config.png)
 </details>
 
+## 3. Prepare the ESXi Installation USB
+
+The next step is to write the ESXi ARM Installer image to a separate USB Storage device.
+
+### 3.1 Download the ESXi ARM Installer 
+
+The original project used the VMware ESXi ARM Fling.
+
+The historical download source was the following link: 
+
+<a href="https://community.broadcom.com/flings/home">VMware Flings - Broadcom</a>
+
+You will need to create an account and then access to the Flings will be granted. 
+
+Download the appropriate ESXi ARM installer package and extract the downloaded archive to access the ISO image.
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![Download ARM Fling](./doc_images/esxi_install_download_fling.png)
+</details>
+
+<strong>Note</strong>: The availability and distribution of historical Fling downloads may change. Confirm that you have a compatible installer before proceeding.
+
+### 3.2 Download an Imaging Tool
+
+The original procedure used Rufus on Windows. 
+- <a href="https://rufus.ie/en/">Rufus</a>
+
+For macOS and Linux, balenaEtcher is recommended:
+- <a href="https://etcher.balena.io/">balenaEtcher</a>
+
+The following steps will use Rufus.
+
+Download the appropriate one for your version of Windows (go to taskbar and type About to see what type of Processor your Windows OS is running on):
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![Download Rufus](./doc_images/esxi_install_download_rufus.png)
+</details>
+
+### 3.3 Write the ESXi ISO to USB using Rufus
+
+1. Insert a USB storage device (16-32 GB) into your computer.
+2. Open Rufus.
+3. Under <strong>Device</strong>, select the USB device intended for the ESXi installer.
+4. Under the <strong>Boot selection</strong>, click <strong>SELECT</strong>.
+<details>
+  <summary>View screenshot</summary>
+
+  ![Select Image](./doc_images/esxi_install_select_button.png)
+</details>
+5. Navigate to the extracted ESXi ARM ISO image.
+<details>
+  <summary>View screenshot</summary>
+
+  ![Select ISO Image](./doc_images/esxi_install_select_iso_image.png)
+</details>
+6. Select the ISO image.
+
+⚠️ <strong>Warning</strong>: This is a destructive operation. Rufus will erase and reformat the selected USB device. Back up any important files before continuing. 
