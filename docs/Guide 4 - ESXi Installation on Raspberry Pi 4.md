@@ -448,5 +448,56 @@ Insert the prepared microSD card into the Raspberry Pi and connect the ESXi inst
   ![UEFI Menu](./doc_images/esxi_install_uefi_menu.jpg)
 </details>
 
-The UEFI menu provides access to the boot settings and hardware configuration needed for ESXi. 
+The UEFI menu provides access to the boot settings and hardware configuration needed for ESXi. If you do not get to above screen after repeatedly pressing ESC, you have missed the time window and must power down the Raspberry Pi (unplug it) wait 10 seconds and power on again. 
+
+## 6. Disable the RAM Limiter 
+
+The original procedure identified a memory limitation in the UEFI configuration. The default configuration exposed approximately 3 GB of RAM to the hypervisor, even when the Raspberry Pi had more physical memory installed. 
+
+The limiter was disabled to allow ESXi to use the available system memory. 
+
+### 6.1 Open Device Manager
+
+Using the keyboard arrows, navigate to <strong>Device Manager</strong> and press Enter. 
+
+### 6.2 Open Raspberry Pi Configuration
+
+Navigate to <strong>Raspberry Pi Configuration</strong> and press Enter. 
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![Raspberry Pi Configuration](./doc_images/esxi_rasp_pi_config.png)
+</details>
+
+### 6.3 Open Advanced Configuration
+
+Select <strong>Advanced Configuration</strong>
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![Advanced Configuration](./doc_images/esxi_install_advanced_config.png)
+</details>
+
+### 6.4 Disable the Limiter
+
+1. Highlight the first configuration entry and hit Enter.
+<details>
+  <summary>View screenshot</summary>
+
+  ![Select First Entry](./doc_images/esxi_install_select_first_entry.png)
+</details>
+
+2. Change the setting to disabled (highlight disabled and hit Enter)
+<details>
+  <summary>View screenshot</summary>
+
+  ![Set Disabled](./doc_images/esxi_install_set_disabled.png)
+</details>
+
+3. Please F10 to save the changes.
+4. Press Y to confirm.
+
+
 
