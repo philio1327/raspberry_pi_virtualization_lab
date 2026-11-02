@@ -670,4 +670,31 @@ The original documentation notes that forgetting the root password may require e
 
 ## 11. Confirm and Install ESXi
 
+After configuring the keyboard and root password:
 
+1. Press Enter to continue.
+2. Review the installation confirmation.
+3. Press F11 when prompted to begin installing the ESXi hypervisor.
+<details>
+  <summary>View screenshot</summary>
+
+  ![Press F11](./doc_images/esxi_install_press_f11.png)
+</details>
+
+4. Wait for the installation to complete.
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![Wait Installation Complete](./doc_images/esxi_install_wait_install.png)
+</details>
+
+Once installation finishes, remove the ESXi installer USB before rebooting.
+
+Keep the microSD and the separate USB device containing the ESXi installation connected. In the example, remove the Lexar USB.  
+
+Disconnect the internet Ethernet connection and connect the Raspberry Pi to the switch connected to the OpenWRT DHCP server.
+
+The ESXi installation and boot files now reside on the USB storage device. 
+
+## 12. 
