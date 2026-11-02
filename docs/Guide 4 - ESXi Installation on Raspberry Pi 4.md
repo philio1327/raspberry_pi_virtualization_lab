@@ -163,7 +163,9 @@ Note: You can add in SSH Keys and other authentication controls such as a passwo
    Note: You can omit sudo if you are the root user.
 
    Then,
+   
    <code>sudo apt full-upgrade</code>
+   
    <code>sudo rpi-update</code>
 
    <details>
@@ -173,7 +175,9 @@ Note: You can add in SSH Keys and other authentication controls such as a passwo
    </details>
 
    Then finally the following commands:
+   
    <code>sudo rpi-eeprom-update -a</code>
+   
    <code>sudo reboot</code>
 
    <details>
@@ -197,7 +201,12 @@ Then <strong>sudo reboot</strong> and once the Raspberry Pi is on, unplug the po
 
 ### 2.4 Erase the microSD Card
 
+Once the firmware and EEPROM updates are complete, the Raspberry Pi OS installation is no longer required. 
 
-
-   
+1. Remove the microSD card and connect it to your computer.
+2. Open the Raspberry Pi Imager.
+3. Select the correct Raspberry Pi device.
+4. Under <strong>Choose OS</strong>, scroll down and select <strong>Erase</strong>.
+5. Select the microSD card as the storage device.
+6. Confirm the operation and wait for the erase process to complete.
 
