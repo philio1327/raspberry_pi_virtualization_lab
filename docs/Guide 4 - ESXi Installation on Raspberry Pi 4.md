@@ -206,7 +206,32 @@ Once the firmware and EEPROM updates are complete, the Raspberry Pi OS installat
 1. Remove the microSD card and connect it to your computer.
 2. Open the Raspberry Pi Imager.
 3. Select the correct Raspberry Pi device.
+<details>
+  <summary>View screenshot</summary>
+
+  ![Choose Device](./doc_images/esxi_install_choose_device2.png)
+</details>
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![Choose Device](./doc_images/esxi_install_choose_device3.png)
+</details>
+
 4. Under <strong>Choose OS</strong>, scroll down and select <strong>Erase</strong>.
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![Choose OS](./doc_images/esxi_install_choose_os2.png)
+</details>
+
+<details>
+  <summary>View screenshot</summary>
+  
+  ![Erase](./doc_images/esxi_install_erase.png)
+</details>
+
 5. Select the microSD card as the storage device.
 6. Confirm the operation and wait for the erase process to complete.
 
