@@ -499,5 +499,27 @@ Select <strong>Advanced Configuration</strong>
 3. Please F10 to save the changes.
 4. Press Y to confirm.
 
+### 6.5 Return to the Main Menu and Reboot
+
+1. Press ESC repeatedly until you return to the language selection screen.
+<details>
+  <summary>View screenshot</summary>
+
+  ![Return to Select Lang](./doc_images/esxi_install_return_to_start.png)
+</details>
+
+2. Highlight <strong>Continue</strong>.
+<details>
+  <summary>View screenshot</summary>
+
+  ![Highlight Continue](./doc_images/esxi_install_highlight_continue.png)
+</details>
+
+3. Press Enter to apply the configuration changes.
+4. Allow the Raspberry Pi to reboot.
+5. Once it restarts, repeatedly press ESC to return to the UEFI interface.
+
+The memory limiter configuration is now updated. 
+
 
 
