@@ -147,3 +147,66 @@ Note: You can add in SSH Keys and other authentication controls such as a passwo
 
 5. Power on the Raspberry Pi and complete the initial Raspberry Pi OS setup.
 6. Update the operating system and bootloader EEPROM.
+   To do this, once Raspberry Pi has booted, and you've logged in using your login credentials (it may ask you to create new credentials on first boot, or you can use username "root" when prompted and leave the password blank, though it may ask you to provide a password).
+   
+   Ensure you have an internet connection by using the command: <code>ping google.com</code>
+
+   <details>
+     <summary>View screenshot</summary>
+
+     ![Ping Test](./doc_images/esxi_install_ping_test.png)
+   </details>
+
+   Then update your Raspberry Pi using:
+   <code>sudo apt update && sudo apt upgrade -y</code>
+
+   Note: You can omit sudo if you are the root user.
+
+   Then,
+   
+   <code>sudo apt full-upgrade</code>
+   
+   <code>sudo rpi-update</code>
+
+   <details>
+     <summary>View screenshot</summary>
+
+     ![RPI Update](./doc_images/esxi_install_rpi_update.png)
+   </details>
+
+   Then finally the following commands:
+   
+   <code>sudo rpi-eeprom-update -a</code>
+   
+   <code>sudo reboot</code>
+
+   <details>
+     <summary>View screenshot</summary>
+
+     ![Update EEPROM](./doc_images/esxi_install_eeprom_update.png)
+   </details>
+
+### 2.3 Verify the Bootloader
+
+Once the update and reboot are complete, sign in to your Raspberry Pi using the credentials you configured and verify that the bootloader installed correctly. Use the following command:
+<code>sudo rpi-eeprom-update -a</code>
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![Verify EEPROM](./doc_images/esxi_install_verify_eeprom.png)
+</details>
+
+Then <strong>sudo reboot</strong> and once the Raspberry Pi is on, unplug the power source to the Raspberry Pi and remove the SD card. 
+
+### 2.4 Erase the microSD Card
+
+Once the firmware and EEPROM updates are complete, the Raspberry Pi OS installation is no longer required. 
+
+1. Remove the microSD card and connect it to your computer.
+2. Open the Raspberry Pi Imager.
+3. Select the correct Raspberry Pi device.
+4. Under <strong>Choose OS</strong>, scroll down and select <strong>Erase</strong>.
+5. Select the microSD card as the storage device.
+6. Confirm the operation and wait for the erase process to complete.
+
