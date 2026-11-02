@@ -233,5 +233,12 @@ Once the firmware and EEPROM updates are complete, the Raspberry Pi OS installat
 </details>
 
 5. Select the microSD card as the storage device.
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![Choose Storage](./doc_images/esxi_install_choose_storage2.png)
+</details>
+
 6. Confirm the operation and wait for the erase process to complete.
 
