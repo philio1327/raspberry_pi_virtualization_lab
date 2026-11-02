@@ -83,4 +83,30 @@ Once logged in to OpenWRT:
   ![Add New DNS Record](./doc_images/dns_add_new.png)
 </details>
 
+## 4. Create a DNS Record for an ESXi Host
 
+A DNS Record associates a hostname with an IP address. This allows devices on the local network to resolve the hostname without having to remember the IP address.
+
+For each ESXi host:
+
+1. Select the IP address assigned to the device from the available IP address dropdown.
+<details>
+  <summary>View screenshot</summary>
+
+  ![IP Address Dropdown](./doc_images/dns_ip_dropdown.png)
+</details>
+
+2. Enter a hostname for the device.
+<details>
+  <summary>View screenshot</summary>
+
+  ![Sample Hostname](./doc_images/dns_sample_hostname.png) 
+</details>
+
+3. Save the record.
+
+I will name them:
+- raspberrypi4_1
+- raspberrypi4_2
+- raspberrypi4_3
+- raspberrypi4_4
