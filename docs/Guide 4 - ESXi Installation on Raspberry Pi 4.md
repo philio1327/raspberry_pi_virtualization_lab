@@ -117,5 +117,33 @@ The purpose of this installation is to update the Raspberry Pi and its EEPROM bo
 
 ⚠️ <strong>Warning</strong>: Writing an operating system to the microSD card erases its existing contents. Verify that you have selected the correct storage device. 
 
+Note: You can add in SSH Keys and other authentication controls such as a password for the Rasbian Lite OS; however it is unnecessary as this OS will be overwritten. 
+
+<strong>Ensure you disable the wifi under Edit Settings before writing to this microSD card</strong>
+
 ### 2.2 Boot the Raspberry Pi and Update the System 
 
+1. Safely eject the microSD card from your computer.
+2. Insert it into the Raspberry Pi.
+<details>
+  <summary>View screenshot</summary>
+
+  ![Insert microSD](./doc_images/esxi_install_rasp_pi_microSD.png)
+</details>
+
+3. Connect a monitor and keyboard to the Raspberry Pi.
+<details>
+  <summary>View screenshot</summary>
+
+  ![Connect Monitor & Keyboard](./doc_images/esxi_install_connect_monitor.png)
+</details>
+
+4. Connect the Raspberry Pi to the internet using Ethernet.
+<details>
+  <summary>View screenshot</summary>
+
+  ![Connect Ethernet](./doc_images/esxi_install_connect_ethernet.png)
+</details>
+
+5. Power on the Raspberry Pi and complete the initial Raspberry Pi OS setup.
+6. Update the operating system and bootloader EEPROM.
