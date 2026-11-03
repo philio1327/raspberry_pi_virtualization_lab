@@ -179,3 +179,123 @@ Change this default password before relying on the NAS in an operational environ
   ![OMV Dashboard](./doc_images/omv_dashboard.png)
 </details>
 
+## 9. Prepare the External Storage Drive
+
+Connect the 1 TB external drive to a USB 3.0 port on the Raspberry Pi.
+
+OpenMediaVault must recognize the drive before it can be configured as storage.
+
+### 9.1 Identify the Disk 
+
+1. In the OpenMediaVault web interface, navigate to <strong>Storage -> Disks</strong>.
+<details>
+  <summary>View screenshot</summary>
+
+  ![Storage Disks](./doc_images/omv_storage_disks.png)
+</details>
+
+2. Locate the connected 1 TB SSD Drive.
+<details>
+  <summary>View screenshot</summary>
+
+  ![Storage Drive](./doc_images/omv_ssd_drive.png)
+</details>
+
+3. Confirm that the selected device is the external drive.
+
+### 9.2 Wipe the Disk
+
+Select the external drive and use the wipe function.
+
+<strong>Warning</strong>: Wiping the disk permanently removes its existing partition information and data. Confirm that you have selected the correct drive.
+
+1. Select your Hard Drive.
+2. Click the <strong>Eraser</strong> icon.
+<details>
+  <summary>View screenshot</summary>
+
+  ![Eraser](./doc_images/omv_eraser.png)
+</details>
+
+3. Confirm Wipe.
+<details>
+  <summary>View screenshot</summary>
+
+  ![Confirm Wipe](./doc_images/omv_confirm_wipe.png)
+</details>
+
+### 9.3 Create and mount an EXT4 filesystem.
+
+Linux distributions (such as the ESXi hosts) prefer the ext4 filesystem partition scheme. Note that Windows uses SMB and this can be enabled in OMV later on.
+
+1. Navigate to <strong>Storage -> File Systems</strong>.
+<details>
+  <summary>View screenshot</summary>
+
+  ![File Systems](./doc_images/omv_filesystems.png)
+</details>
+
+2. Select <strong>Create and Mount</strong>.
+<details>
+  <summary>View screenshot</summary>
+
+  ![Create and Mount](./doc_images/omv_create_and_mount.png)
+</details>
+
+3. Select <strong>EXT4</strong> as the filesystem.
+<details>
+  <summary>View screenshot</summary>
+
+  ![Select EXT4](./doc_images/omv_select_ext4.png)
+</details>
+
+4. Click <strong>Select a device</strong> dropdown and select the Hard Drive.
+<details>
+  <summary>View screenshot</summary>
+
+  ![Select Hard Drive](./doc_images/omv_select_a_device.png)
+</details>
+
+5. Select <strong>Save</strong>.
+<details>
+  <summary>View screenshot</summary>
+
+  ![Select Save](./doc_images/omv_select_save.png)
+</details>
+
+6. Allow the Partitioning to Complete.
+<details>
+  <summary>View screenshot</summary>
+
+  ![Partitioning](./doc_images/omv_partitioning.png)
+</details>
+
+7. Go to <strong>File System</strong>.
+<details>
+  <summary>View screenshot</summary>
+
+  ![Select Filesystem](./doc_images/omv_select_filesystem.png)
+</details>
+
+8. Click <strong>Mount</strong>.
+<details>
+  <summary>View screenshot</summary>
+
+  ![Click Mount](./doc_images/omv_mount.png
+</details>
+
+9. Click <strong>Save</strong> then <strong>Apply</strong> at the top to save your configurations.
+<details>
+  <summary>View screenshot</summary>
+
+  ![Click Save](./doc_images/omv_click_save.png)
+</details>
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![Click Apply](./doc_images/omv_click_apply.png)
+</details>
+
+
+
