@@ -236,6 +236,12 @@ The final configuration allows the four ESXi hosts to be accessed using consiste
 - <code>https://raspberrypi4_3.lan</code>
 - <code>https://raspberrypi4_4.lan</code>
 
+<details>
+  <summary>View screenshot</summary>
+
+  ![Final Records](./doc_images/dns_final_records.png)
+</details>
+
 ## Scope and Limitations
 
 This guide documents DNS and DHCP configuration through OpenWRT for the Raspberry Pi virtualization lab. 
