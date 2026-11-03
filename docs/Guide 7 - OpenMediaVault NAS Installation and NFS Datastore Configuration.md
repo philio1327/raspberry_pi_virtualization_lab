@@ -297,5 +297,131 @@ Linux distributions (such as the ESXi hosts) prefer the ext4 filesystem partitio
   ![Click Apply](./doc_images/omv_click_apply.png)
 </details>
 
+## 10. Create an OpenMediaVault Shared Folder
 
+The shared folder provides the directory that will be exported through NFS.
+
+1. Navigate to <strong>Storage -> Shared Folders (LHS panel)</strong>.
+<details>
+  <summary>View screenshot</summary>
+
+  ![Shared Folders](./doc_images/omv_shared_folders.png)
+</details>
+
+2. Select <strong>Create Folder</strong>.
+<details>
+  <summary>View screenshot</summary>
+
+  ![Create Folder](./doc_images/omv_create_folder.png)
+</details>
+
+3. Enter a folder name. Example folder name was <code>nas_folder</code>.
+<details>
+  <summary>View screenshot</summary>
+
+  ![Folder Name](./doc_images/omv_folder_name.png)
+</details>
+
+4. Select the mounted filesystem as the storage location.
+5. Save the configuration.
+<details>
+  <summary>View screenshot</summary>
+
+  ![Save Configuration](./doc_images/omv_save_configuration.png)
+</details>
+
+6. Apply Configuration.
+<details>
+  <summary>View screenshot</summary>
+
+  ![Apply Configuration](./doc_images/omv_apply_configuration.png)
+</details>
+
+The shared folder will be used as the NFS export for the ESXi hosts.
+
+## 11. Configure and Enable NFS (and SMB) Services
+
+NFS (Network File System) allows the ESXi hosts to access storage hosted by the OpenMediaVault server over the network.
+
+### 11.1 Enable NFS
+1. Go the <strong>Services</strong> on the LHS panel.
+<details>
+  <summary>View screenshot</summary>
+
+  ![Storage Services](./doc_images/omv_storage_services.png)
+</details>
+
+2. Select <strong>NFS</strong>.
+<details>
+  <summary>View screenshot</summary>
+
+  ![Select NFS](./doc_images/omv_select_nfs.png)
+</details>
+
+3. Select <strong>Settings</strong>.
+<details>
+  <summary>View screenshot</summary>
+
+  ![Select Settings](./doc_images/omv_select_settings.png)
+</details>
+
+4. Check <strong>Enabled</strong> and click <strong>Save</strong>.
+<details>
+  <summary>View screenshot</summary>
+
+  ![Select Enabled](./doc_images/omv_select_enabled.png)
+</details>
+5. Click Apply to apply the configuration changes.
+
+### 11.2 Create the NFS share
+
+1. Navigate to the NFS shares section and create a new share.
+<details>
+  <summary>View screenshot</summary>
+
+  ![NFS Shares](./doc_images/omv_nfs_shares.png)
+</details>
+
+2. Click <strong>Create Share</strong>.
+3. Under <strong>Shared Folder</strong> select the <strong>Shared Folder</strong> created earlier (named nas_folder). Use the following settings:
+
+<table>
+  <tr>
+    <th>Setting</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td>Shared folder</td>
+    <td>nas_folder</td>
+  </tr>
+  <tr>
+    <td>Client network</td>
+    <td>192.168.1.0/24</td>
+  </tr>
+  <tr>
+    <td>Extra options</td>
+    <td>rw,sync,no_subtree_check,no_root_squash</td>
+  </tr>
+</table>
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![Shared Folder Settings](./doc_images/omv_shared_folder_settings.png)
+</details>
+
+The client network 192.168.1.0/24 allows the lab network to access the NFS export.
+
+The options used in the original configuration are:
+
+- rw - permits read and write access
+- sync - requests synchronous writes.
+- no_subtree_check - disables subtree checking
+- no_root_squash - does not map remote root access to an anonymous user.
+
+<strong>Security note</strong>: no_root_squash grants remote root users elevated access to the exported filesystem. This was part of the original lab configuration, but should be considered carefully outside an isolated lab environment. 
+
+<strong>Save</strong> and <strong>Apply</strong> the NFS share configuration. 
+
+The resulting NFS export path used in this project is: <code>/export/nas_folder</code>
 
