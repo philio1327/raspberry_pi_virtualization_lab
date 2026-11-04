@@ -425,3 +425,74 @@ The options used in the original configuration are:
 
 The resulting NFS export path used in this project is: <code>/export/nas_folder</code>
 
+## 12. Mount the NFS Share on the ESXi Hosts
+
+With OpenMediaVault configured and the NFS share exported, the ESXi hosts can mount the NAS as a datastore. 
+
+Repeat the following procedure on each of the four ESXi hosts. 
+
+1. In a new browser tab, login to one of your ESXi hosts.
+2. Go to <strong>Storage -> Datastores</strong>.
+3. Select <strong>New Datastore</strong>.
+<details>
+  <summary>View screenshot</summary>
+
+  ![New Datastore](./doc_images/omv_select_new_datastore.png)
+</details>
+
+4. Under <strong>creation type</strong>, select <strong>Mount NFS Datastore</strong>.
+5. Provide the NFS Mount Details. <strong>Name</strong> can be anything, <strong>NFS Server</strong> is the IP address assigned to OpenMediaVault (open OpenWRT if you need the value again), <strong>NFS share</strong> is <code>/export/nas_folder</code>. Since OMV supports both NFS 3 and NFS 4, either version can be selected.
+<details>
+  <summary>View screenshot</summary>
+
+  ![NFS Mount Details](./doc_images/omv_nfs_mount_details.png)
+</details>
+
+6. Click <strong>Next</strong> then <strong>Finish</strong>.
+7. Repeat Steps 1 through 6 for the other ESXi hosts.
+
+After mounting to the hosts, your datastore page should resemble these screenshots:
+<details>
+  <summary>View screenshot</summary>
+
+  ![OMV Datastore](./doc_images/omv_datastore_nas1.png)
+</details>
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![OMV Datastore](./doc_images/omv_datastore_nas2.png)
+</details>
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![OMV Datastore](./doc_images/omv_datastore_nas3.png)
+</details>
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![OMV Datastore](./doc_images/omv_datastore_nas4.png)
+</details>
+
+## 13. Verify the Configuration
+
+To see the above images, after mounting the NFS datastore:
+
+1. Navigate to <strong>Storage ->Datastores</strong> on the ESXi host.
+2. Confirm that the NFS datastore appears in the datastore list.
+3. Verify that the datastore reports the expected storage capacity.
+4. Repeat the verification on each ESXi host.
+
+The intended result is for all four ESXi hosts to access the same NAS-backed NFS datastore. 
+
+## 14. Project Notes and Limitations
+
+- The NAS was hosted on a Raspberry Pi 5 with 8 GB of RAM.
+- The external 1 TB drive was connected over USB 3.0 and formatted with EXT4.
+- OpenMediaVault provided the NFS service and the shared-folder management.
+- The NFS export was configured for hte lab subnet 192.168.1.0/24.
+- The four ESXi hosts were intended to use the same NFS-backed datastore.
+- Although the shared storage was configured, the project did not complete a functional vSAN or clustered environment. Mounting a shared NFS datastore along does not establish a working cluster.
+
