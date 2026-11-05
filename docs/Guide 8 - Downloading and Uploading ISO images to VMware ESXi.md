@@ -85,3 +85,98 @@ Selecting <strong>Create Download Package</strong> generates a ZIP archive conta
 
 If your downloaded image is not in ISO format, it must be extracted or converted before it can be uploaded to ESXi.
 
+<details>
+  <summary>View screenshot</summary>
+
+  ![Not ISO image](./doc_images/iso_mount_not_iso.png)
+</details>
+
+### 3.1 Extract the Downloaded Archive
+
+If you have 7-Zip installed:
+
+1. Locate the downloaded archive.
+2. Right-click the file.
+3. Open it using 7-Zip.
+4. Extract the contents to a folder on your computer.
+5. Locate the resulting ISO image.
+
+For UUP Dump packages, follow the package's included instructions to generate the ISO before proceeding.
+
+### 3.2 Prepare USB Storage for Large ISO Files
+
+If you need to copy a large ISO image to a USB drive, the drive may need to be reformatted.
+
+In the original setup, the USB drive was reformatted to use exFAT because the ISO file exceeded the maximum file size supported by FAT32.
+
+To format the drive (Please refer to Guide 3 if you need more details on how to do this):
+
+1. Connect the USB drive to your computer.
+2. Open <strong>Disk Management</strong> in Windows.
+3. Locate the appropriate USB drive.
+4. Right-click the relevant partition and select <strong>Format</strong>.
+5. Select <strong>exFAT</strong> as the filesystem.
+6. Complete the formatting process.
+
+<strong>Warning</strong>: Formatting erases the existing data on the selected partition. Back up any files you need before proceeding, and verify that you have selected the correct USB drive.
+
+<strong>Note</strong>: This formatting step is only necessary if using the USB transfer method. It is not required when uploading the ISO directly from your computer through the ESXi Host Client.
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![Reformatted USB](./doc_images/iso_mount_reformatted_usb.png)
+</details>
+
+## 4. Upload the ISO Image to the ESXi Datastore
+
+Once the ISO image is ready, it can be uploaded to an ESXi datastore.
+
+For this project, the clean operating-system images were stored on the OpenMediaVault NAS rather than the local USB datastore; though the USB datastores were tested for OS launch capabilities (i.e. booting into an OS using a USB as the OS's local hard drive)
+
+### 4.1 Open the NAS Datastore
+
+1. Open the ESXi Host Client in your browser.
+2. Navigate to <strong>Storage -> Datastores</strong>.
+3. Select the <code>my_nas</code> datastore created earlier.
+
+This datastore is backed by OpenMediaVault NAS configured in Guide 7. 
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![Load ISO](./doc_images/iso_mount_select_storage.png)
+</details>
+
+### 4.2 Upload the ISO Image
+
+1. Open the datastore browser for <code>my_nas</code>.
+2. Select <strong>Upload</strong>.
+3. Browse to the ISO image on your computer.
+4. Select the file and begin the upload.
+5. Wait for the upload to finish.
+
+The ISO image will now be stored on the NAS and available for use when creating Virtual Machines.
+
+## 5. Verify the Uploaded Image
+
+After the upload completes:
+
+1. Open the <code>my_nas</code> datastore browser.
+2. Locate the uploaded ISO image.
+3. Confirm that the filename and file extension are correct (.iso)
+4. Ensure that the upload completed successfully.
+
+The ISO is now ready to be selected during virtual machine creation!
+
+## 6. Project Notes and Considerations
+
+- Windows 10 ARM64 build 19045.5679 was used in the original project.
+- Windows 11 ARM64 can be downloaded directly from Microsoft.
+- UUP Dump was used to obtain an older Windows ARM64 installation image.
+- ISO images were stored on the OpenMediaVault <code>my_nas</code> datastore.
+- The USB formatting procedure was included as an alternative method for transferring large files.
+- Linux distributions were generally more straightforward to prepare and install, using their respective installation ISOs. (in submitted project, Fedora, uBuntu, Kali Linux, CentOS were easily installed ARM64 versions for each using their official installation ISOs found on their respective websites).
+
+<strong>Important</strong>: The Windows download links and UUP Dump interface may change over time. The build number documented here reflects the original project, not necessarily the latest available release.
+
