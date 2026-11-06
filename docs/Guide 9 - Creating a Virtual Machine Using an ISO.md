@@ -70,7 +70,7 @@ For this walkthrough, the following configuration was used:
   </tr>
 </table>
 
-<strong>Important</strong>: The Raspberry Pi has 8 GB of physical RAM. ESXi requires memory for its own operation, so allocating too much memory to the guest OS can cause resource contention and instability.
+<strong>Important</strong>: The Raspberry Pi has 8 GB of physical RAM. ESXi requires memory for its own operation, so allocating too much memory to the guest OS can cause resource contention and instability. The hypervisor will always prioritize itself when there is resource contention so the guest OS will simply crash!
 
 ## 3. Create a Virtual Machine
 
