@@ -380,15 +380,17 @@ Download the appropriate one for your version of Windows (go to taskbar and type
 
   ![Select Image](./doc_images/esxi_install_select_button.png)
 </details>
+
 5. Navigate to the extracted ESXi ARM ISO image.
 <details>
   <summary>View screenshot</summary>
 
   ![Select ISO Image](./doc_images/esxi_install_select_iso_image.png)
 </details>
+
 6. Select the ISO image.
 
-⚠️ <strong>Warning</strong>: This is a destructive operation. Rufus will erase and reformat the selected USB device. Back up any important files before continuing. 
+<strong>Warning</strong>: This is a destructive operation. Rufus will erase and reformat the selected USB device. Back up any important files before continuing. 
 
 ### 3.4 Configure the Partition Scheme and Cluster Size
 
