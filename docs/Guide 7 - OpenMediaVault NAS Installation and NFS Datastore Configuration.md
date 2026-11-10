@@ -198,7 +198,7 @@ OpenMediaVault must recognize the drive before it can be configured as storage.
 <details>
   <summary>View screenshot</summary>
 
-  ![Storage Drive](./doc_images/omv_ssd_drive.png)
+  ![Storage Drive](./doc_images/omv_storage_drive.png)
 </details>
 
 3. Confirm that the selected device is the external drive.
@@ -281,7 +281,7 @@ Linux distributions (such as the ESXi hosts) prefer the ext4 filesystem partitio
 <details>
   <summary>View screenshot</summary>
 
-  ![Click Mount](./doc_images/omv_mount.png
+  ![Click Mount](./doc_images/omv_mount.png)
 </details>
 
 9. Click <strong>Save</strong> then <strong>Apply</strong> at the top to save your configurations.

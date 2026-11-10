@@ -77,6 +77,7 @@ The microSD card will contain the Raspberry Pi firmware and UEFI bootloader requ
 
   ![Choose Raspberry Pi 4](./doc_images/esxi_install_choose_rasp4.png)
 </details>
+
 5. Under <strong>Choose OS</strong>, select Raspberry Pi OS Lite (64-bit).
 
 <details>
@@ -151,11 +152,11 @@ Note: You can add in SSH Keys and other authentication controls such as a passwo
    
    Ensure you have an internet connection by using the command: <code>ping google.com</code>
 
-   <details>
-     <summary>View screenshot</summary>
+<details>
+  <summary>View screenshot</summary>
 
-     ![Ping Test](./doc_images/esxi_install_ping_test.png)
-   </details>
+  ![Ping Test](./doc_images/esxi_install_ping_test.png)
+</details>
 
    Then update your Raspberry Pi using:
    <code>sudo apt update && sudo apt upgrade -y</code>
@@ -168,11 +169,11 @@ Note: You can add in SSH Keys and other authentication controls such as a passwo
    
    <code>sudo rpi-update</code>
 
-   <details>
-     <summary>View screenshot</summary>
+<details>
+  <summary>View screenshot</summary>
 
-     ![RPI Update](./doc_images/esxi_install_rpi_update.png)
-   </details>
+  ![RPI Update](./doc_images/esxi_install_rpi_update.png)
+</details>
 
    Then finally the following commands:
    
@@ -180,11 +181,11 @@ Note: You can add in SSH Keys and other authentication controls such as a passwo
    
    <code>sudo reboot</code>
 
-   <details>
-     <summary>View screenshot</summary>
+<details>
+  <summary>View screenshot</summary>
 
-     ![Update EEPROM](./doc_images/esxi_install_eeprom_update.png)
-   </details>
+  ![Update EEPROM](./doc_images/esxi_install_eeprom_update.png)
+</details>
 
 ### 2.3 Verify the Bootloader
 
@@ -379,15 +380,17 @@ Download the appropriate one for your version of Windows (go to taskbar and type
 
   ![Select Image](./doc_images/esxi_install_select_button.png)
 </details>
+
 5. Navigate to the extracted ESXi ARM ISO image.
 <details>
   <summary>View screenshot</summary>
 
   ![Select ISO Image](./doc_images/esxi_install_select_iso_image.png)
 </details>
+
 6. Select the ISO image.
 
-⚠️ <strong>Warning</strong>: This is a destructive operation. Rufus will erase and reformat the selected USB device. Back up any important files before continuing. 
+<strong>Warning</strong>: This is a destructive operation. Rufus will erase and reformat the selected USB device. Back up any important files before continuing. 
 
 ### 3.4 Configure the Partition Scheme and Cluster Size
 
@@ -467,7 +470,7 @@ Navigate to <strong>Raspberry Pi Configuration</strong> and press Enter.
 <details>
   <summary>View screenshot</summary>
 
-  ![Raspberry Pi Configuration](./doc_images/esxi_rasp_pi_config.png)
+  ![Raspberry Pi Configuration](./doc_images/esxi_install_rasp_pi_config.png)
 </details>
 
 ### 6.3 Open Advanced Configuration
