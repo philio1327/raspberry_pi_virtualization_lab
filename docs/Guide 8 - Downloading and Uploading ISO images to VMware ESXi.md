@@ -180,3 +180,10 @@ The ISO is now ready to be selected during virtual machine creation!
 
 <strong>Important</strong>: The Windows download links and UUP Dump interface may change over time. The build number documented here reflects the original project, not necessarily the latest available release.
 
+## 7. Related Guides
+
+- Guide 3 - USB Storage Preparation
+- Guide 4 - ESXi Installation on Raspberry Pi
+- Guide 6 - Add a Datastore to VMware ESXi
+- Guide 7 - OpenMediaVault NAS Installation and NFS Datastore Configuration
+- Guide 9 - Creating a Virtual Machine Using an ISO
