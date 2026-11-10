@@ -203,6 +203,7 @@ Next, attach the operating-system ISO to the virtual machine.
 
   ![Select Image from Datastore](./doc_images/create_vm_select_image_from_datastore.png)
 </details>
+
 5. Select the uploaded Windows 10 ARM64 ISO.
 <details>
   <summary>View screenshot</summary>
