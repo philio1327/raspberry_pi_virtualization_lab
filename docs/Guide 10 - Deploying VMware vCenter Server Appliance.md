@@ -126,7 +126,7 @@ The cost of this license as of the writing of the project was $15.90 and the lin
 <details>
   <summary>View screenshot</summary>
 
-  ![vCenter ISO Download](./doc_images/vcenter_download_iso.png)
+  ![vCenter ISO Download](./doc_images/vcenter_server_download_iso.png)
 </details>
 
 The installation media used in the project was:
@@ -175,7 +175,7 @@ The VMware installation media includes the OVF Tool (<code>ovftool</code>).
 2. Navigate to your \vcsa folder using cd (example commands):
 
 <code>cd Desktop</code>
-<code>{folder_name}</code>
+<code>cd {folder_name}</code>
 <code>cd vcsa</code>
 
 3. Use the following command to convert the ova to ovf file:
@@ -371,7 +371,7 @@ This was the IP address used by the vCenter appliance during initial setup.
 <details>
   <summary>View screenshot</summary>
 
-  ![Verify Configurations](./doc_images/verify_configurations.png)
+  ![Verify Configurations](./doc_images/vcenter_verify_configurations.png)
 </details>
 
 6. Click <strong>Finish</strong> and <strong>OK</strong>.
