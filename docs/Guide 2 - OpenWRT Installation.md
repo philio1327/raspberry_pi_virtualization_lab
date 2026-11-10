@@ -1,4 +1,4 @@
-# OpenWRT Installation on Raspberry Pi
+# Guide 2 - OpenWRT Installation on Raspberry Pi
 
 This guide documents the installation of OpenWRT on a Raspberry Pi for use as a DHCP and DNS server in a small virtualized lab environment. 
 
