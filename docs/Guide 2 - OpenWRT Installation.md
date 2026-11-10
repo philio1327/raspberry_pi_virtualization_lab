@@ -211,7 +211,7 @@ D. Copy the generated password into the password field in Raspberry Pi Imager's 
 
 #### Security considerations:
 - Use a password manager to store the generated password securely.
-- Never commit a reail password or other credentials to GitHub.
+- Never commit a real password or other credentials to GitHub.
 - This script selects from the combined character set but does not guarantee that every character category appears in each password.
 - The Raspberry Pi Imager customization workflow depends on the firmware image and software version; verify that your selected OpenWRT image supports the settings you configure.
 
