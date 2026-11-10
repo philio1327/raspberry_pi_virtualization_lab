@@ -394,4 +394,19 @@ This was the IP address used by the vCenter appliance during initial setup.
   ![Successful Login](./doc_images/vcenter_successful_login.png)
 </details>
 
-## 12
+## 12. Project Notes and Limitations
+
+- vCenter Server Appliance 8.0.0.10000 (build 20519528) was deployed using VMware Workstation Pro 17.
+- The Tiny deployment size was selected due to the laptop's limited resources.
+- The vCenter appliance was configured with the vsphere.local SSO domain.
+- The appliance management interface was accessed at https://192.168.1.163:5480.
+- The vSphere Client was accessed at https://vsphere.lan.
+- The laptop hosted vCenter separately from the Raspberry Pi ESXi infrastructure.
+
+This guide covers vCenter deployment only. Registering ESXi hosts and configuring the vSphere inventory are covered in Guide 11. 
+
+## 13. Related Guides
+
+- Guide 5 - OpenWRT DNS Configuration
+- Guide 7 - OpenMediaVault NAS Installation and NFS Datastore Configuration
+- Guide 11 - Adding ESXi Hosts to vCenter Server
