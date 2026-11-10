@@ -322,3 +322,91 @@ The screen should look similar to the following once you've clicked Import, and 
 
   ![Network Configuration](./doc_images/vcenter_server_phase_1.png)
 </details>
+
+## 11. Complete Phase 2 Configuration
+
+Once the initial appliance deployment has completed, the second configuration stage must be performed.
+
+Open a browser and navigate to the appliance management interface:
+
+<code>https://192.168.1.163:5480</code>
+
+This was the IP address used by the vCenter appliance during initial setup. 
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![vCenter Dashboard](./doc_images/vcenter_phase_2_dashboard.png)
+</details>
+
+1. Click the Setup button to begin the setup wizard.
+<details>
+  <summary>View screenshot</summary>
+
+  ![vCenter Setup Wizard](./doc_images/vcenter_setup_wizard.png)
+</details>
+
+2. Configure the vCenter Server as follows:
+<details>
+  <summary>View screenshot</summary>
+
+  ![Server Configuration](./doc_images/vcenter_configure_server.png)
+</details>
+
+3. Setup SSO, see example below:
+<details>
+  <summary>View screenshot</summary>
+
+  ![Setup SSO](./doc_images/vcenter_setup_sso.png)
+</details>
+
+4. Deselect Join Customer Experience Improvement Program
+<details>
+  <summary>View screenshot</summary>
+
+  ![Deselect CEIP](./doc_images/vcenter_deselect_ceip.png)
+</details>
+
+5. Verify Configurations
+<details>
+  <summary>View screenshot</summary>
+
+  ![Verify Configurations](./doc_images/verify_configurations.png)
+</details>
+
+6. Click <strong>Finish</strong> and <strong>OK</strong>.
+<details>
+  <summary>View screenshot</summary>
+
+  ![Confirm](./doc_images/vcenter_confirm.png)
+</details>
+
+7. Login using <strong>root</strong> and the password is the root password configured previously.
+<details>
+  <summary>View screenshot</summary>
+
+  ![Login Screen](./doc_images/vcenter_login_screen.png)
+</details>
+
+<details>
+  <summary>View screenshot</summary>
+
+  ![Successful Login](./doc_images/vcenter_successful_login.png)
+</details>
+
+## 12. Project Notes and Limitations
+
+- vCenter Server Appliance 8.0.0.10000 (build 20519528) was deployed using VMware Workstation Pro 17.
+- The Tiny deployment size was selected due to the laptop's limited resources.
+- The vCenter appliance was configured with the vsphere.local SSO domain.
+- The appliance management interface was accessed at https://192.168.1.163:5480.
+- The vSphere Client was accessed at https://vsphere.lan.
+- The laptop hosted vCenter separately from the Raspberry Pi ESXi infrastructure.
+
+This guide covers vCenter deployment only. Registering ESXi hosts and configuring the vSphere inventory are covered in Guide 11. 
+
+## 13. Related Guides
+
+- Guide 5 - OpenWRT DNS Configuration
+- Guide 7 - OpenMediaVault NAS Installation and NFS Datastore Configuration
+- Guide 11 - Adding ESXi Hosts to vCenter Server
