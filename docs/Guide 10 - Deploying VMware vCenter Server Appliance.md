@@ -371,7 +371,7 @@ This was the IP address used by the vCenter appliance during initial setup.
 <details>
   <summary>View screenshot</summary>
 
-  ![Verify Configurations](./doc_images/verify_configurations.png)
+  ![Verify Configurations](./doc_images/vcenter_verify_configurations.png)
 </details>
 
 6. Click <strong>Finish</strong> and <strong>OK</strong>.
