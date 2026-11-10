@@ -175,7 +175,7 @@ The VMware installation media includes the OVF Tool (<code>ovftool</code>).
 2. Navigate to your \vcsa folder using cd (example commands):
 
 <code>cd Desktop</code>
-<code>{folder_name}</code>
+<code>cd {folder_name}</code>
 <code>cd vcsa</code>
 
 3. Use the following command to convert the ova to ovf file:
