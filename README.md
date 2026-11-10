@@ -49,8 +49,6 @@ The environment was designed as a foundation for future malware-analysis work. V
 
 ## Future Work 
 
-- Complete the architecture diagram and detailed implementation documentation.
-- Organize available screenshots and configuration evidence.
 - Further assess network isolation and guest-to-host attack paths.
 - Investigate clustering requirements and shared-storage limitations.
 - Define and validate additional containment controls before considering live malware analysis.
