@@ -496,3 +496,11 @@ The intended result is for all four ESXi hosts to access the same NAS-backed NFS
 - The four ESXi hosts were intended to use the same NFS-backed datastore.
 - Although the shared storage was configured, the project did not complete a functional vSAN or clustered environment. Mounting a shared NFS datastore along does not establish a working cluster.
 
+## 15. Related Guides
+
+- Guide 1 - Raspberry Pi Boot Configuration
+- Guide 2 - OpenWRT Installation
+- Guide 3 - USB Storage Preparation
+- Guide 4 - ESXi Installation on Raspberry Pi
+- Guide 5 - OpenWRT DNS Configuration
+- Guide 6 - Add a Datastore to VMware ESXi

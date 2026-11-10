@@ -797,7 +797,7 @@ The ESXi web interface provides access to the host's virtualization management f
 
 Record the IP address assigned to each Raspberry Pi. These addresses will be used in the subsequent network configuration and host management procedures.
 
-## Verification and Results
+## 15. Verification and Results
 
 The installation procedure is considered successful when:
 
@@ -810,7 +810,7 @@ The installation procedure is considered successful when:
 
 In the original project, this process was used to configure multiple Raspberry Pi 4 devices as ESXi hosts.
 
-## Scope and Limitations
+## 16. Scope and Limitations
 
 This guide covers the preparation and installation of ESXi ARM on Raspberry Pi 4 hardware. 
 
@@ -825,3 +825,10 @@ It does not cover:
 These procedures are documented in subsequent guides. 
 
 The project used ESXi ARM on Raspberry Pi 4 hardware. Compatibility with other Raspberry Pi models and newer firmware versions should not be assumed.
+
+## 17. Related Guides
+
+- Guide 1 - Raspberry Pi Boot Configuration
+- Guide 2 - OpenWRT Installation on Raspberry Pi 4
+- Guide 3 - USB Storage Preparation for ESXi
+- Guide 5 - OpenWRT DNS Configuration 
