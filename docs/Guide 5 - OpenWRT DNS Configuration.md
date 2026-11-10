@@ -220,7 +220,7 @@ Repeat the verification process for all four hosts.
   ![Monitor Connection to Host](./doc_images/dns_monitor_connect.jpg)
 </details>
 
-## Verification and Results
+## 10. Verification and Results
 
 The DNS configuration is successful when:
 - Each ESXi host has a corresponding DNS record in OpenWRT.
@@ -242,7 +242,7 @@ The final configuration allows the four ESXi hosts to be accessed using consiste
   ![Final Records](./doc_images/dns_final_records.png)
 </details>
 
-## Scope and Limitations
+## 11. Scope and Limitations
 
 This guide documents DNS and DHCP configuration through OpenWRT for the Raspberry Pi virtualization lab. 
 
@@ -257,3 +257,10 @@ The guide does not cover:
 
 Those tasks are addressed separately in subsequent guides. 
 
+## 12. Related Guides
+
+- Guide 1 - Raspberry Pi Boot Configuration
+- Guide 2 - OpenWRT Installation on Raspberry Pi
+- Guide 3 - USB Storage Preparation for ESXi
+- Guide 4 - ESXi Installation on Raspberry Pi 4
+- Guide 6 - Add a Datastore to VMware ESXi
