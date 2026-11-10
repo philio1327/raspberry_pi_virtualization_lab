@@ -372,11 +372,25 @@ The final deployment used the NAS SSD instead of USB storage because of the stab
 
 Allow the installation to complete and let the VM restart when prompted.
 
-## 12. Complete Windows Initial Setup (OOBE)
+## 12. Increase the CPU Allocation
+
+After Windows has successfully installed, the VM's CPU allocation can be increased.
+
+1. Power off the virtual machine.
+2. Select the VM and click <strong>Edit</strong>.
+3. Navigate to the CPU settings.
+4. Increase the CPU allocation from 1 to 2.
+5. Increase the RAM allocation to 5536 MB. 
+6. Save the configuration.
+7. Power the VM back on.
+
+Although the Raspberry Pi 4 has a quad-core processor, the final configuration used 2 vCPUs for stability.
+
+## 13. Complete Windows Initial Setup (OOBE)
 
 After installation, Windows will launch its Out-of-Box-Experience (OOBE), which guides the user through initial OS configuration. 
 
-### 12.1 Select the Region
+### 13.1 Select the Region
 
 In the original installation, selecting a different region resulted in an OOBELocal error. Selecting the United States avoided this issue. 
 
@@ -386,7 +400,7 @@ In the original installation, selecting a different region resulted in an OOBELo
   ![Windows Setup](./doc_images/create_vm_setup_windows_07.png)
 </details>
 
-### 12.2 Bypass Network Configuration
+### 13.2 Bypass Network Configuration
 
 When Windows reaches the network configuration screen, the installation can be completed without configuring internet connectivity. 
 
@@ -433,7 +447,7 @@ After restarting:
 
 This allows Windows setup to proceed without an internet connection.
 
-### 12.3 Create a User Account
+### 13.3 Create a User Account
 
 Enter a username and create a password for the Windows VM.
 
@@ -445,7 +459,7 @@ Keep these credentials somewhere secure. Windows will also prompt you to configu
   ![Windows Setup](./doc_images/create_vm_setup_windows_13.png)
 </details>
 
-### 12.4 Configure Privacy Settings
+### 13.4 Configure Privacy Settings
 
 Proceed through the remaining Windows setup screens.
 
@@ -475,7 +489,7 @@ Because this VM is not being configured with internet connectivity, Cortana was 
   ![Windows Setup](./doc_images/create_vm_setup_windows_16.png)
 </details>
 
-## 13. Verify the Windows Installation
+## 14. Verify the Windows Installation
 
 Allow Windows to complete its initial configuration.
 
@@ -488,3 +502,15 @@ At this point, the Windows 10 virtual machine has been successfully installed an
 
   ![Windows Setup](./doc_images/create_vm_setup_windows_17.png)
 </details>
+
+## 15. Project Notes and Limitations
+
+- Windows 10 ARM64 was used as the primary installation example.
+- The VM was initially configured with 1 vCPU and 5 GB RAM.
+- The CPU allocation was increased to 2 vCPUs after installation. (Increase of RAM to 5536 MB as well).
+- The final Windows installation used the OpenMediaVault NAS datastore (<code>my_nas</code>).
+- USB storage was tested but proved significantly slower, and sometimes less stable.
+- The Windows installation was completed without configuring internet connectivity.
+- Linux distributions such as Kali Linux, Ubuntu, Fedora, and CentOS were also provisioned as VMs during the project, and the installation process was much more straightforward.
+
+This guide documents VM creation and operating-system installation. It does not cover the later isolation tests, snapshot creation, or snapshot recovery procedures.
