@@ -151,11 +151,11 @@ Note: You can add in SSH Keys and other authentication controls such as a passwo
    
    Ensure you have an internet connection by using the command: <code>ping google.com</code>
 
-   <details>
-     <summary>View screenshot</summary>
+<details>
+ <summary>View screenshot</summary>
 
-     ![Ping Test](./doc_images/esxi_install_ping_test.png)
-   </details>
+ ![Ping Test](./doc_images/esxi_install_ping_test.png)
+</details>
 
    Then update your Raspberry Pi using:
    <code>sudo apt update && sudo apt upgrade -y</code>
@@ -168,11 +168,11 @@ Note: You can add in SSH Keys and other authentication controls such as a passwo
    
    <code>sudo rpi-update</code>
 
-   <details>
-     <summary>View screenshot</summary>
+<details>
+ <summary>View screenshot</summary>
 
-     ![RPI Update](./doc_images/esxi_install_rpi_update.png)
-   </details>
+ ![RPI Update](./doc_images/esxi_install_rpi_update.png)
+</details>
 
    Then finally the following commands:
    
@@ -180,11 +180,11 @@ Note: You can add in SSH Keys and other authentication controls such as a passwo
    
    <code>sudo reboot</code>
 
-   <details>
-     <summary>View screenshot</summary>
+<details>
+ <summary>View screenshot</summary>
 
-     ![Update EEPROM](./doc_images/esxi_install_eeprom_update.png)
-   </details>
+ ![Update EEPROM](./doc_images/esxi_install_eeprom_update.png)
+</details>
 
 ### 2.3 Verify the Bootloader
 
