@@ -727,8 +727,13 @@ The Raspberry Pi must boot from the USB device containing the installed ESXi hyp
   ![Change Boot Order](./doc_images/esxi_install_change_boot_order.png)
 </details>
 
-6. Highlight the USB device containing the ESXi installation.
-7. Use the + key to move the USB device to the top of the boot order.
+6. Press Enter and highlight the USB device containing the ESXi installation.
+<details>
+  <summary>View screenshot</summary>
+
+  ![Press Enter](./doc_images/esxi_install_boot_press_enter.png)
+</details>
+8. Use the + key to move the USB device to the top of the boot order.
 
 <details>
   <summary>View screenshot</summary>
