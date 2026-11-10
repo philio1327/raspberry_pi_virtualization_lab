@@ -126,7 +126,7 @@ The cost of this license as of the writing of the project was $15.90 and the lin
 <details>
   <summary>View screenshot</summary>
 
-  ![vCenter ISO Download](./doc_images/vcenter_download_iso.png)
+  ![vCenter ISO Download](./doc_images/vcenter_server_download_iso.png)
 </details>
 
 The installation media used in the project was:
