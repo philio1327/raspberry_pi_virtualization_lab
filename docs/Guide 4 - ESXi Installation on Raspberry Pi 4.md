@@ -77,6 +77,7 @@ The microSD card will contain the Raspberry Pi firmware and UEFI bootloader requ
 
   ![Choose Raspberry Pi 4](./doc_images/esxi_install_choose_rasp4.png)
 </details>
+
 5. Under <strong>Choose OS</strong>, select Raspberry Pi OS Lite (64-bit).
 
 <details>
