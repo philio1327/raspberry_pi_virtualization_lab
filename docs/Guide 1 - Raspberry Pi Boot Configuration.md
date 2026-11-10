@@ -1,4 +1,4 @@
-# Raspberry Pi Boot Configuration
+# Guide 1 - Raspberry Pi Boot Configuration
 
 This guide documents how to prepare a Raspberry Pi bootloader for a selected boot method using Raspberry Pi Imager. It was developed as part of a larger project to build a virtualized environment for isolated malware-analysis research.
 
