@@ -198,7 +198,7 @@ OpenMediaVault must recognize the drive before it can be configured as storage.
 <details>
   <summary>View screenshot</summary>
 
-  ![Storage Drive](./doc_images/omv_ssd_drive.png)
+  ![Storage Drive](./doc_images/omv_storage_drive.png)
 </details>
 
 3. Confirm that the selected device is the external drive.
