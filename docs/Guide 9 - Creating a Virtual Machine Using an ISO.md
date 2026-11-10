@@ -197,7 +197,7 @@ Next, attach the operating-system ISO to the virtual machine.
 </details>
 
 3. Click <strong>Browse</strong>.
-4. Navigate to the <code>my_nas</strong> datastore.
+4. Navigate to the <code>my_nas</code> datastore.
 <details>
   <summary>View screenshot</summary>
 
