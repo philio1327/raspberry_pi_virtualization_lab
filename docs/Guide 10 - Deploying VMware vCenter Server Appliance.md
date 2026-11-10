@@ -32,7 +32,7 @@ vCenter must be hosted inside a Virtual Machine. We will install VMware Workstat
 
 1. Login to your Broadcom Account (you can create one if this has not already been done).
 2. Head to the following link (may have changed since project):
-<a href="https://support.broadcom.com/group/ecx/productdownloads?subfamily=VMware%20Workstation%20Pro&freeDownloads=true>VMware Workstation Pro 17 Download Page</a>
+<a href="https://support.broadcom.com/group/ecx/productdownloads?subfamily=VMware%20Workstation%20Pro&freeDownloads=true">VMware Workstation Pro 17 Download Page</a>
 
 <details>
   <summary>View screenshot</summary>
