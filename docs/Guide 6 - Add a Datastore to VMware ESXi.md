@@ -1,4 +1,4 @@
-# Add a Datastore to VMware ESXi
+# Guide 6 - Add a Datastore to VMware ESXi
 
 ## 1. Overview
 
