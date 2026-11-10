@@ -345,7 +345,7 @@ Next, there was a missing shared-storage/vSAN configuration for the cluster crea
 <details>
   <summary>View screenshot</summary>
 
-  ![Failed Cluster](./doc_images/vcenter_failed_cluster.png)
+  ![Failed Cluster](./doc_images/vcenter_failed_cluster_step.png)
 </details>
 
 The intended storage arrangement involved separating storage for NAS use from storage intended for vSAN compatibility. This was the suspected cause recorded during the project, not a confirmed daignosis.
