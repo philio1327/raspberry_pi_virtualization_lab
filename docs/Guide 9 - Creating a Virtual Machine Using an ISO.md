@@ -514,3 +514,11 @@ At this point, the Windows 10 virtual machine has been successfully installed an
 - Linux distributions such as Kali Linux, Ubuntu, Fedora, and CentOS were also provisioned as VMs during the project, and the installation process was much more straightforward.
 
 This guide documents VM creation and operating-system installation. It does not cover the later isolation tests, snapshot creation, or snapshot recovery procedures.
+
+## 16. Related Guides
+
+- Guide 4 - ESXi Installation on Raspberry Pi
+- Guide 6 - Add a Datastore to VMware ESXi
+- Guide 7 - OpenMediaVault NAS Installation and NFS Datastore Configuration
+- Guide 8 - Downloading and Uploading ISO Images to VMware ESXi
+- Guide 10 - Adding ESXi Hosts to vCenter
