@@ -1,4 +1,4 @@
-# USB Storage Preparation for ESXi
+# Guide 3 - USB Storage Preparation for ESXi
 
 ## Overview
 
