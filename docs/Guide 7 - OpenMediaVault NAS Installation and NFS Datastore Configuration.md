@@ -281,7 +281,7 @@ Linux distributions (such as the ESXi hosts) prefer the ext4 filesystem partitio
 <details>
   <summary>View screenshot</summary>
 
-  ![Click Mount](./doc_images/omv_mount.png
+  ![Click Mount](./doc_images/omv_mount.png)
 </details>
 
 9. Click <strong>Save</strong> then <strong>Apply</strong> at the top to save your configurations.
