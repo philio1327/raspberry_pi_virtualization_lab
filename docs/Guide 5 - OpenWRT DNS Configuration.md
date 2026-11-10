@@ -1,4 +1,4 @@
-# OpenWRT DNS Configuration
+# Guide 5 - OpenWRT DNS Configuration
 
 ## Overview
 
