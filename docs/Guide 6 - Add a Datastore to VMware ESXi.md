@@ -162,3 +162,9 @@ The datastore should now be available to the ESXi host for storing virtual machi
 - The project also included a separate OpenMediaVault NAS with a 1 TB SSD, configured to provide NFS storage. That configuration is distinct from this local USB datastore.
 - The project did not complete vSAN or clustered shared-storage configuration.
 - USB storage compatibility and preformance can vary depending on the device, adapter and ESXi version. 
+
+## 9. Related Guides
+
+- Guide 3 - USB Storage Preparation
+- Guide 4 - ESXi Installation on Raspberry Pi
+- Guide 5 - OpenWRT DNS Configuration
