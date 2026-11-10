@@ -470,7 +470,7 @@ Navigate to <strong>Raspberry Pi Configuration</strong> and press Enter.
 <details>
   <summary>View screenshot</summary>
 
-  ![Raspberry Pi Configuration](./doc_images/esxi_rasp_pi_config.png)
+  ![Raspberry Pi Configuration](./doc_images/esxi_install_rasp_pi_config.png)
 </details>
 
 ### 6.3 Open Advanced Configuration
