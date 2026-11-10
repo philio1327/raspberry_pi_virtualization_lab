@@ -738,13 +738,13 @@ The Raspberry Pi must boot from the USB device containing the installed ESXi hyp
 <details>
   <summary>View screenshot</summary>
 
-  ![Change Order](./doc_images/esxi_images_change_order.png)
+  ![Change Order](./doc_images/esxi_install_change_order.png)
 </details>
 
 <details>
   <summary>View screenshot</summary>
 
-  ![Change Order](./doc_images/esxi_images_change_order2.png)
+  ![Change Order](./doc_images/esxi_install_change_order2.png)
 </details>
 
 8. Press Enter to confirm.
